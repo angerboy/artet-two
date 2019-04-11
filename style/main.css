@@ -98,6 +98,33 @@ p {
 	justify-content: space-around;
 }
 
+.landing-text-container {
+	text-align: center;
+	width: 618px;
+}
+
+/* LANDING BLOCK */
+
+img#artet-cannabis-aperitif {
+	width: 174px; 
+	height: auto;
+}
+
+.landing-text-container p {
+	font-family: 'Abuget';
+	color: #f9f3e0;
+	font-size: 56pt;
+	line-height: 1.2;
+}
+
+img#scroll-to-discover {
+	
+}
+
+img#scroll-to-discover-mobile {
+	display: none;
+}
+
 
 /* IMAGE BLOCKS */
 
@@ -121,6 +148,8 @@ p {
 
 	left: 49%;
 	top: 9%;
+
+	z-index: 1;
 }
 
 .panel-3 #coup {
@@ -130,6 +159,24 @@ p {
 	top: 43%;
 
 	z-index: 2;
+}
+
+.panel-3 #juniper {
+	position: absolute;
+
+	left: 22%;
+	top: 77%;
+
+	z-index: 3;
+}
+
+.panel-3 #peel {
+	position: absolute;
+
+	left: 67%;
+	top: 72%;
+
+	z-index: 0;
 }
 
 /* panel-4 */
@@ -216,16 +263,79 @@ p {
 	height: 260px;
 }
 
+#panel-3-ac-bg {
+	display: none;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 900px), (max-device-width: 900px) {
+
+	.content-container .row.text-block-right.panel-3 {
+		background-image: none;
+		background-color: #1d2942;
+	}
+
 	.row {
 		flex-direction: column;
 	}
 
-	.text-block-right .text-container {
+	.text-block-right .text-container, .text-block-left .text-container {
 		margin: 0;
 		justify-content: center;
+	}
+
+	.landing-text-container {
+		width: 75%;
+	}
+	
+	.landing-text-container p {
+		font-size: 14vw;
+	}
+
+	img#artet-cannabis-aperitif {
+		width: 34%;
+	}
+
+	img#scroll-to-discover {
+		display: none;
+	}
+	
+	img#scroll-to-discover-mobile {
+		display: block;
+	}
+
+	.text-container {
+		order: 1;
+		flex: 1;
+		height: 50vh;
+	}
+
+	.animation-container {
+		order: 2;
+		flex: 1;
+		height: 50vh;
+	}
+
+	.animation-items {
+		display: none;
+	}
+
+	.text-box {
+		width: 75%;
+		height: auto;
+	}
+
+	.text-block .text-container .text-box h1 {
+		font-size: 13vw;
+	}
+
+	.text-block .text-container .text-box p {
+		font-size: 5vw;
+	}
+
+	#panel-3-ac-bg {
+		display: block;
 	}
 }
 
