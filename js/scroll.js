@@ -97,12 +97,9 @@ var positionIndicator = document.getElementById('position-indicator');
 		positionIndicator.className = "position-indicator";
 		positionIndicator.className += " " +  panelNumberToPositionIndicatorClassMap[panelNumber];
 		const image = panelNumberToPositionIndicatorBGImageMap[panelNumber];
-		console.log("image: ", image);
 		if(image !== 'hidden') {
 			const url = 'url(' + image + ')';
-			console.log("url: ", url);
 			positionIndicator.style.backgroundImage = url;
-			console.log("BG: ", positionIndicator.style.backgroundImage);
 		}
 	}
 
