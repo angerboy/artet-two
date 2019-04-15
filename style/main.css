@@ -99,6 +99,8 @@ p {
 	background-repeat: no-repeat;
 
 	z-index: 10;
+
+	transition: transform 0.5s;
 }
 
 .content-container {
@@ -685,6 +687,19 @@ img#scroll-to-discover-mobile {
 	-webkit-animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
 	        animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
 }
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1.5s linear 0.5s;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1.5s, opacity 1.5s linear;
+}
+
 
 /* SCROLL */
 

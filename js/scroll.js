@@ -5,6 +5,8 @@ const idToAnimationClass = {
 	'bottle-spritz': 'slide-in-right'
 };
 
+var positionIndicator = document.getElementById('position-indicator');
+
 // Detect Scrolls/Swipes
 (function() {
 	"use strict";
@@ -39,6 +41,7 @@ const idToAnimationClass = {
 
 		const panelNumber = 1 + (Math.abs(slength) / 100);
 		animatePanel(panelNumber);
+		animatePositionIndicator(panelNumber);
 
 		pan.style.transform = 'translateY(' + slength + 'vh)';
 		pan.removeEventListener('wheel', _scrollY);
@@ -69,6 +72,37 @@ const idToAnimationClass = {
 					div.className += " " + idToAnimationClass[div.id];
 				})
 			}
+		}
+	}
+
+	const panelNumberToPositionIndicatorClassMap = {
+		1: 'visible',
+		2: 'hidden',
+		3: 'visible',
+		4: 'visible',
+		5: 'hidden',
+		6: 'visible'
+	}
+
+	const panelNumberToPositionIndicatorBGImageMap = {
+		1: 'assets/PNG/2x/position-indicator-1@2x.png',
+		2: 'hidden',
+		3: 'assets/PNG/2x/position-indicator-2@2x.png',
+		4: 'assets/PNG/2x/position-indicator-3@2x.png',
+		5: 'hidden',
+		6: 'assets/PNG/2x/position-indicator-4@2x.png'
+	}
+
+	function animatePositionIndicator(panelNumber) {
+		positionIndicator.className = "position-indicator";
+		positionIndicator.className += " " +  panelNumberToPositionIndicatorClassMap[panelNumber];
+		const image = panelNumberToPositionIndicatorBGImageMap[panelNumber];
+		console.log("image: ", image);
+		if(image !== 'hidden') {
+			const url = 'url(' + image + ')';
+			console.log("url: ", url);
+			positionIndicator.style.backgroundImage = url;
+			console.log("BG: ", positionIndicator.style.backgroundImage);
 		}
 	}
 
