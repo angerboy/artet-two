@@ -81,7 +81,8 @@ var positionIndicator = document.getElementById('position-indicator');
 		3: 'visible',
 		4: 'visible',
 		5: 'hidden',
-		6: 'visible'
+		6: 'hidden',
+		7: 'visible'
 	}
 
 	const panelNumberToPositionIndicatorBGImageMap = {
@@ -90,7 +91,8 @@ var positionIndicator = document.getElementById('position-indicator');
 		3: 'assets/PNG/2x/position-indicator-2@2x.png',
 		4: 'assets/PNG/2x/position-indicator-3@2x.png',
 		5: 'hidden',
-		6: 'assets/PNG/2x/position-indicator-4@2x.png'
+		6: 'hidden',
+		7: 'assets/PNG/2x/position-indicator-4@2x.png'
 	}
 
 	function animatePositionIndicator(panelNumber) {
