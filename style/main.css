@@ -52,11 +52,15 @@
 }
 
 .content-container .row.landing-block {
-	background: url("../assets/PNG/1x/landing-block-background.png") center center / cover no-repeat fixed;
+	background-color: #1d2942;
 }
 
 .content-container .row.text-block-right.panel-3 {
-	background: url("../assets/PNG/Background/Panel_01_BG.png") center center / cover no-repeat;
+	background-color: #1c2942;
+}
+
+.content-container .row.text-block-right.panel-3 .animation-container {
+	background: url("../assets/PNG/Background/Panel_03_BG.png") 40% center / contain no-repeat;
 	background-attachment: static;
 }
 
@@ -135,6 +139,34 @@ p {
 
 /* LANDING BLOCK */
 
+.landing-block .background-design {
+	position: relative;
+
+	left: 50vw;
+	top: 50vh;
+	transform: translate(-50%,-50%);
+
+	width: 67%;
+}
+
+.landing-block .background-design .background-img {
+	position: absolute;
+
+	left: 20%;
+	top: 33%;
+}
+
+.landing-block .background-design #img-left {
+	transform: translate(-45%,-63%);
+	width: 130%;
+}
+
+.landing-block .background-design #img-right {
+	transform: translate(-26%,-50%);
+	opacity: 0.5;
+	width: 90%;
+}
+
 img#artet-cannabis-aperitif {
 	width: 174px; 
 	height: auto;
@@ -147,12 +179,25 @@ img#artet-cannabis-aperitif {
 	line-height: 1.2;
 }
 
-img#scroll-to-discover {
-	
-}
-
 img#scroll-to-discover-mobile {
 	display: none;
+}
+
+@media (max-width: 900px), (max-device-width: 900px) {
+
+	.landing-block .background-design {
+		width: 90%;
+	}
+
+	.landing-block .background-design #img-left {
+		transform: translate(-27%,-78%);
+		width: 160%;
+	}
+
+	.landing-block .background-design #img-right {
+		transform: translate(-35%,-50%);
+		width: 129%;
+	}
 }
 
 
@@ -501,7 +546,6 @@ img#scroll-to-discover-mobile {
 
 .text-block {
 	display: flex;
-	/* align-items: stretch; */
 }
 
 .text-block-right {
