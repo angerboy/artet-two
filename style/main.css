@@ -686,6 +686,19 @@ img#scroll-to-discover-mobile {
 		height: 100%;
 	}
 
+	.panel-7 .animation-items {
+		left: unset;
+		zoom: 1.5;
+	}
+
+	.panel-7 .learn-more-text-box {
+		width: 500px;
+	}
+
+	.panel-7 .learn-more-text-box h2 {
+		font-size: 24pt;
+	}
+
 	.text-box {
 		width: 75%;
 		height: auto;
