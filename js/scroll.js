@@ -58,7 +58,7 @@ var positionIndicator = document.getElementById('position-indicator');
 
 		// remove animation classes to repeat animations
 		animatedElements.forEach(function(element) {
-			element.className = "img-responsive animated";
+			element.className = "animated";
 		})
 
 		animatedElements = [];

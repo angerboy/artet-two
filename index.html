@@ -5,8 +5,32 @@
 
 	<!-- Main Style -->
 	<link href="style/main.css" rel="stylesheet">
+
+	<!-- Age Verification -->
+	<script src="js/age-verification.js"></script>
 </head>
 <body>
+<div class="age-verification hidden" id="age-verification">
+	<img class="wing left-wing" src="assets/PNG/1x/left-wing.png" srcset="assets/PNG/2x/left-wing@2x.png 1088w,
+													assets/PNG/3x/left-wing@3x.png 1632w">
+	<div class="content-box">
+		<div class="logo">
+			<img id="age-logo" src="assets/PNG/1x/artet-cannabis-aperitif.png" srcset="assets/PNG/2x/artet-cannabis-aperitif@2x.png 347w,
+			assets/PNG/3x/artet-cannabis-aperitif@3x.png 520w">
+		</div>
+		<div class="text-and-buttons">
+			<p>Welcome to the website of Artet. Stay for however long you please, but first, confirm you are 21 years of age or older.</p>
+			<div class="buttons">
+				<button onclick="over21()">I'm over 21</button>
+				<button onclick="under21()">I'm under 21</button>
+			</div>
+		</div>
+	</div>
+
+	<img class="wing right-wing" src="assets/PNG/1x/right-wing.png" srcset="assets/PNG/2x/right-wing@2x.png 1088w,
+													assets/PNG/3x/right-wing@3x.png 1632w">
+</div>
+
 <div class="position-indicator" id="position-indicator">
 
 </div>
