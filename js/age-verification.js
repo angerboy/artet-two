@@ -1,5 +1,13 @@
 
-window.onload = function() {
+if( document.readyState !== 'loading' ) {
+    checkAge();
+} else {
+    document.addEventListener('DOMContentLoaded', function () {
+        checkAge();
+    });
+}
+
+function checkAge() {
     const ageVerificationDiv = document.getElementById('age-verification');
     const sidebar = document.getElementById('position-indicator');
     if(document.cookie === "verified=true") {
