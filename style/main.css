@@ -250,17 +250,21 @@ img#scroll-to-discover-mobile {
 	width: 285.654px;
 	height: 541.117px;
 
-	/* width: 53.57%;
-	height: 88.67%; */
-
 	right: 0;
 
+	perspective: 80px;
+
 	transition: transform 0.5s;
+	transform-style: preserve-3d;
 }
 
 .panel-3 #bottle {
 	position: absolute;
 	z-index: 1;
+
+	transition: transform 0.5s;
+
+	display: inline-block;
 }
 
 .panel-3 #peel {
@@ -270,6 +274,9 @@ img#scroll-to-discover-mobile {
 	right: 0;
 
 	z-index: 0;
+
+	transition: transform 0.5s;
+	display: inline-block;
 }
 
 .panel-3 #coup-and-lemon {
@@ -278,11 +285,10 @@ img#scroll-to-discover-mobile {
 	width: 235.134px;
 	height: 349px;
 
-	/* width: 44.09%;
-	height: 57.19%; */
-
 	left: 12.86%;
 	top: 39.52%;
+
+	perspective: 60px;
 
 	transition: transform 0.5s;
 }
@@ -311,6 +317,8 @@ img#scroll-to-discover-mobile {
 	bottom: 0;
 
 	z-index: 3;
+
+	transition: transform 0.5s;
 } 
 
 /* panel-4 */

@@ -1,6 +1,14 @@
 var container = document.getElementById('panel-3-animation-items');
 var inner = document.getElementById('bottle-and-peel');
 
+const scaleMap = {
+  'bottle': '0.8',
+  'peel': '2',
+  'juniper': '3',
+  'coup': '1.5',
+  'lemon': '1'
+}
+
 // Mouse 
 var mouse = {
     _x: 0,
@@ -30,13 +38,44 @@ var mouse = {
   };
   
   var updateTransformStyle = function(x, y) {
-    var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
-    inner.style.transform = style;
-    inner.style.webkitTransform = style;
-    inner.style.mozTransform = style;
-    inner.style.msTransform = style;
-    inner.style.oTransform = style;
+
+    var rotatedDivs = Array.from(container.getElementsByClassName("rotated"));
+
+    var scale, scaledX, scaledY, style;
+
+    rotatedDivs.forEach(function(div) {
+
+      console.log("rotate div: ", div.id);
+
+      scale = scaleMap[div.id];
+      if(scale === null || scale === undefined) {
+        scale = 1;
+      }
+
+      scaledX = x * scale;
+      scaledY = y * scale;
+
+      // console.log("scaledX: ", scaledX);
+      // console.log("scaledY: ", scaledY);
+
+      style = "rotateX(" + scaledX + "deg) rotateY(" + scaledY + "deg)";
+      console.log("style: ", style);
+      div.style.transform = style;
+      div.style.webkitTransform = style;
+      div.style.mozTransform = style;
+      div.style.msTransform = style;
+      div.style.oTransform = style;
+    });
+
+    // var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+    // inner.style.transform = style;
+    // inner.style.webkitTransform = style;
+    // inner.style.mozTransform = style;
+    // inner.style.msTransform = style;
+    // inner.style.oTransform = style;
   };
+
+
 
 var onMouseEnterHandler = function(event) {
     update(event);  
