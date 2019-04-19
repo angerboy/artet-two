@@ -140,6 +140,10 @@ p {
 	width: 618px;
 }
 
+a {
+	color: #fcf6e3;
+}
+
 a:visited {
 	color: #fcf6e3;
 }
