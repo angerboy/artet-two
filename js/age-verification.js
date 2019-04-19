@@ -1,11 +1,11 @@
 
-if( document.readyState !== 'loading' ) {
-    checkAge();
-} else {
-    document.addEventListener('DOMContentLoaded', function () {
-        checkAge();
-    });
-}
+// if( document.readyState !== 'loading' ) {
+//     checkAge();
+// } else {
+//     document.addEventListener('DOMContentLoaded', function () {
+//         checkAge();
+//     });
+// }
 
 function checkAge() {
     const ageVerificationDiv = document.getElementById('age-verification');

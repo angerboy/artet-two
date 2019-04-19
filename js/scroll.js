@@ -1,8 +1,13 @@
 const idToAnimationClass = {
-	'coup': 'slide-in-top-fast',
-	'bottle': 'slide-in-top-slow',
+	'coup': 'slide-in-left',
+	'bottle': 'slide-in-right',
 	'highball-tonic': 'slide-in-left',
-	'bottle-spritz': 'slide-in-right'
+	'bottle-spritz': 'slide-in-right',
+	// 'bottle-7': 'slide-in-top-fast',
+	// 'orange': 'slide-in-top-fast',
+	// 'coup-7': 'slide-in-top-slow',
+	// 'rock': 'slide-in-top-slow',
+	// 'lime': 'slide-in-top-slow'
 };
 
 var positionIndicator = document.getElementById('position-indicator');
@@ -56,6 +61,8 @@ var positionIndicator = document.getElementById('position-indicator');
 
 	function animatePanel(panelNumber) {
 
+		console.log("animate panel: ", panelNumber);
+
 		// remove animation classes to repeat animations
 		animatedElements.forEach(function(element) {
 			element.className = "animated";
@@ -64,8 +71,10 @@ var positionIndicator = document.getElementById('position-indicator');
 		animatedElements = [];
 
 		var panel = document.getElementById('panel-' + panelNumber);
+		console.log("panel: ", panel);
 		if (panel !== undefined && panel !== null) {
 			var animatedDivs = Array.from(panel.getElementsByClassName("animated"));
+			console.log("animatedDivs: ", animatedDivs);
 			animatedElements = animatedDivs
 			if (animatedDivs !== undefined && animatedDivs !== null && animatedDivs.length > 0) {
 				animatedDivs.forEach(function(div) {
@@ -112,7 +121,7 @@ var positionIndicator = document.getElementById('position-indicator');
 			sY,
 			dX,
 			dY,
-			threshold = 100,
+			threshold = 50,
 			/*[min distance traveled to be considered swipe]*/
 			slack = 50,
 			/*[max distance allowed at the same time in perpendicular direction]*/
@@ -126,7 +135,7 @@ var positionIndicator = document.getElementById('position-indicator');
 			sX = tchs.pageX;
 			sY = tchs.pageY;
 			stT = new Date().getTime();
-			//e.preventDefault();
+			e.preventDefault();
 		}, false);
 
 		obj.addEventListener('touchmove', function(e) {
