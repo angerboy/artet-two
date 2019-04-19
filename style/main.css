@@ -674,8 +674,13 @@ img#scroll-to-discover-mobile {
 
 @media (max-width: 900px), (max-device-width: 900px) {
 
-	.position-indicator {
+	/* .position-indicator {
 		display: none;
+	} */
+
+	.position-indicator {
+		width: 30px;
+		height: 500px;
 	}
 
 	.content-container .row.text-block-right.panel-3 {
