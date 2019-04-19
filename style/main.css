@@ -140,6 +140,10 @@ p {
 	width: 618px;
 }
 
+a:visited {
+	color: #fcf6e3;
+}
+
 /* LANDING BLOCK */
 
 .landing-block .background-design {

@@ -13,6 +13,8 @@ function checkAge() {
     if(document.cookie === "verified=true") {
         ageVerificationDiv.className = "age-verification hidden";
         sidebar.className = "position-indicator visible";
+
+        fadeInLandingBlock();
     } else {
         ageVerificationDiv.className = "age-verification visible";
     }
@@ -26,8 +28,22 @@ function over21() {
     sidebar.className = "position-indicator visible";
 
     document.cookie = "verified=true";
+
+    fadeInLandingBlock();
 }
 
 function under21() {
     window.location = "https://google.com";
+}
+
+function fadeInLandingBlock() {
+    const logo = document.getElementById('artet-cannabis-aperitif');
+    const text = document.getElementById('landing-block-text');
+    const scroll = document.getElementById('scroll-to-discover');
+    const scrollMobile = document.getElementById('scroll-to-discover-mobile');
+
+    logo.className = "visible";
+    text.className = "landing-text-container visible";
+    scroll.className = "visible";
+    scrollMobile.className = "visible";
 }
