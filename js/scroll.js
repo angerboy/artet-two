@@ -112,7 +112,7 @@ var positionIndicator = document.getElementById('position-indicator');
 			sY,
 			dX,
 			dY,
-			threshold = 50,
+			threshold = 10,
 			/*[min distance traveled to be considered swipe]*/
 			slack = 50,
 			/*[max distance allowed at the same time in perpendicular direction]*/
@@ -140,6 +140,7 @@ var positionIndicator = document.getElementById('position-indicator');
 			elT = new Date().getTime() - stT;
 			if (elT <= alT) {
 				if (Math.abs(dX) >= threshold && Math.abs(dY) <= slack) {
+
 					swdir = (dX < 0) ? 'left' : 'right';
 				} else if (Math.abs(dY) >= threshold && Math.abs(dX) <= slack) {
 					swdir = (dY < 0) ? 'up' : 'down';

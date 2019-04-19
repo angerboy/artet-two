@@ -142,6 +142,7 @@ p {
 
 a {
 	color: #fcf6e3;
+	clear: both;
 }
 
 a:visited {
@@ -673,10 +674,6 @@ img#scroll-to-discover-mobile {
 }
 
 @media (max-width: 900px), (max-device-width: 900px) {
-
-	/* .position-indicator {
-		display: none;
-	} */
 
 	.position-indicator {
 		width: 30px;
