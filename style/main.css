@@ -533,6 +533,34 @@ img#scroll-to-discover-mobile {
 	padding-bottom: 70px;
 }
 
+@media (max-width: 900px), (max-device-width: 900px) { 
+	.row.panel-6 .text-container .info-text {
+		max-width: 95%;
+	}
+
+	.row.panel-6 .companies {
+		flex-wrap: wrap;
+		flex-grow: 2;
+		padding-bottom: 50px;
+	}
+
+	.row.panel-6 .companies .company { 
+		max-width: 85%;
+	}
+
+	.row.panel-6 .text-container .info-text h3 {
+		font-size: 2.1vw;
+	}
+
+	.row.panel-6 .companies .company h4 {
+		font-size: 3.1vw;
+	}
+
+	.row.panel-6 .companies .company p {
+		font-size: 2.3vw;
+	}
+	
+}
 
 /* ANIMATION CONTAINER */
 .animation-container {
