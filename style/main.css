@@ -197,6 +197,10 @@ img#scroll-to-discover-mobile {
 
 @media (max-width: 900px), (max-device-width: 900px) {
 
+	#scroll-to-discover-mobile {
+		padding-bottom: 44px;
+	}
+
 	.landing-block .background-design {
 		width: 90%;
 	}
