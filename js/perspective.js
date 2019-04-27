@@ -81,7 +81,6 @@ var onMouseEnterHandler = function(event) {
     update(event);  
   };
 var onMouseLeaveHandler = function() {
-inner.style = "position: absolute; width: 285.654px; height: 541.117px; right: 0;";
 };
 var onMouseMoveHandler = function(event) {
 if (isTimeToUpdate()) {

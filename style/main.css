@@ -251,10 +251,10 @@ img#scroll-to-discover-mobile {
 .panel-3 .animation-items {
 	position: relative;
 
-	width: 533.284px;
-	height: 610.233px;
+	width: 69%;
+	height: 85%;
 
-	top: 10%;
+	top: 15%;
 	left: 22%;
 }
 
@@ -265,8 +265,8 @@ img#scroll-to-discover-mobile {
 .panel-3 #bottle-and-peel {
 	position: absolute;
 
-	width: 285.654px;
-	height: 541.117px;
+	width: 55%;
+	height: 90%;
 
 	right: 0;
 
@@ -283,10 +283,18 @@ img#scroll-to-discover-mobile {
 	transition: transform 0.5s;
 
 	display: inline-block;
+
+	width: 62%;
+	height: auto;
+
+	bottom: 0;
 }
 
 .panel-3 #peel {
 	position: absolute;
+
+	width: 44%;
+	height: auto;
 
 	bottom: 0;
 	right: 0;
@@ -300,8 +308,8 @@ img#scroll-to-discover-mobile {
 .panel-3 #coup-and-lemon {
 	position: absolute;
 
-	width: 235.134px;
-	height: 349px;
+	width: 41%;
+	height: 54%;
 
 	left: 12.86%;
 	top: 39.52%;
@@ -314,6 +322,9 @@ img#scroll-to-discover-mobile {
 .panel-3 #coup {
 	position: absolute;
 
+	width: 84%;
+	height: auto;
+
 	bottom: 0;
 	right: 0;
 
@@ -322,6 +333,9 @@ img#scroll-to-discover-mobile {
 
 .panel-3 #lemon {
 	position: absolute;
+
+	width: 40%;
+	height: auto;
 
 	top: 0;
 	left: 0;
@@ -332,7 +346,11 @@ img#scroll-to-discover-mobile {
 .panel-3 #juniper {
 	position: absolute;
 
+	width: 38%;
+	height: auto;
+
 	bottom: 0;
+	left: 0;
 
 	z-index: 3;
 
@@ -687,14 +705,13 @@ img#scroll-to-discover-mobile {
 @media (max-width: 900px), (max-device-width: 900px) {
 	.panel-3 .animation-items { 
 		width: 80%;
-		transform: scale(0.5);
 		left: unset;
 		top: unset;
 		bottom: 10%;
+		height: 100%;
 	}
 
 	.panel-3 #bottle-and-peel {	
-		transform: scale(0.5);
 	}
 	
 	.panel-3 #bottle {
@@ -702,25 +719,18 @@ img#scroll-to-discover-mobile {
 	}
 	
 	.panel-3 #peel {
-		right: 0;
 	}
 	
 	.panel-3 #coup-and-lemon {
-		transform: scale(0.5);
 	}
 	
 	.panel-3 #coup {
-		bottom: 0;
-		right: 0;
 	}
 	
 	.panel-3 #lemon {
-		top: 0;
-		left: 0;
 	}
 	
 	.panel-3 #juniper {
-		transform: scale(0.5);
 	} 
 	
 }
