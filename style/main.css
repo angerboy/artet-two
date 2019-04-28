@@ -359,31 +359,106 @@ img#scroll-to-discover-mobile {
 
 /* panel-4 */
 
-/* .panel-4 .animation-container {
-	padding-top: 100%;
-	height: 0;
-} */
+.panel-4 .animation-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
 .panel-4 .animation-items {
 	position: relative;
 
-	padding-top: 85%;
-	width: 91%;
-	height: 0;
+	max-width: 720px;
+	height: 85%;
 
-	top: 4%;
-	left: 0;
+	display: grid;
+
+	grid-template-columns: 3% 24% 17% 9% 26% 21%;
+	grid-template-rows: 19% 9% 62% 4% 3% 3%;
 }
 
-/* .panel-4 .animation-inside {
-	position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-} */
-
 .panel-4 #bottle-spritz-and-shape {
+	grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.panel-4 #bottle-spritz {
+	position: absolute;
+
+	max-width: 337px;
+	max-height: 98%;
+
+	margin-left: 5%;
+
+	z-index: 3;
+}
+
+.panel-4 #shape {
+	position: absolute;
+
+	max-width: 164px;
+	height: auto;
+
+	top: 23%;
+}
+
+.panel-4 #plant-and-rock-glass {
+	position: relative;
+
+	grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+
+.panel-4 #plant {
+	position: absolute;
+
+	max-width: 275px;
+	max-height: 100%;
+}
+
+.panel-4 #rock-glass {
+	position: absolute;
+
+	max-width: 179px;
+	max-height: 100%;
+
+	z-index: 1;
+
+	bottom: 0;
+	right: 0;
+}
+
+.panel-4 #highball-tonic { 
+	grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+	grid-row-end: 5;
+	
+	max-width: 285px;
+	max-height: 100%;
+
+	margin-left: 9%;
+
+	z-index: 1;
+}
+
+.panel-4 #shadow { 
+	grid-column-start: 2;
+  grid-column-end: 7;
+  grid-row-start: 4;
+	grid-row-end: 7;
+	
+	max-width: 100%;
+	max-height: 107%;
+
+	z-index: 0;
+}
+
+/* .panel-4 #bottle-spritz-and-shape {
 	position: absolute;
 
 	max-height: 660px;
@@ -470,7 +545,7 @@ img#scroll-to-discover-mobile {
 	left: 3%;
 
 	z-index: 0;
-}
+} */
 
 /* panel-7 */
 
