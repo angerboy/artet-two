@@ -1,14 +1,21 @@
-window.onresize = function() {
-    document.body.height = window.innerHeight;
-}
-window.onresize(); // called to initially set the height.
+// We listen to the resize event
+window.addEventListener('resize', () => {
+	// We execute the same script as before
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
+// window.onresize = function() {
+//     document.body.height = window.innerHeight;
+// }
+// window.onresize(); // called to initially set the height.
 
 const idToAnimationClass = {
 	'coup': 'slide-in-left',
 	'lemon': 'slide-in-left',
 	'bottle': 'slide-in-right',
 	'highball-tonic': 'slide-in-left',
-	'bottle-spritz': 'slide-in-right',
+	'bottle-spritz': 'slide-in-right'
 };
 
 var positionIndicator = document.getElementById('position-indicator');
