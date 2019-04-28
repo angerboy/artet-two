@@ -248,6 +248,13 @@ img#scroll-to-discover-mobile {
 
 /* panel-3 */
 
+.panel-3 .animation-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 10%;
+}
+
 .panel-3 .animation-items {
 	position: relative;
 
@@ -256,8 +263,8 @@ img#scroll-to-discover-mobile {
 
 	display: grid;
 
-	grid-template-columns: 13% 27% 6% 11% 19% 3% 21%;
-	grid-template-rows: 39% 36% 3% 11% 6% 5%;
+	grid-template-columns: 13% 26% 6% 11% 19% 4% 21%;
+	grid-template-rows: 41% 34% 3% 11% 6% 5%;
 }
 
 #panel-3-animation-items {
@@ -468,93 +475,158 @@ img#scroll-to-discover-mobile {
 
 /* panel-7 */
 
-.panel-7 .animation-items {
-	position: absolute;
-
-	width: 432.388px;
-	height: 619.763px;
-
-	bottom: 0;
-	left: 10%;
+.panel-7 .animation-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
-.panel-7 #hand-and-tray {
-	position: absolute;
+.panel-7 .animation-items {
+	position: relative;
 
-	width: 100%;
-	height: 428px;
+	max-width: 451px;
+	height: 90%;
 
-	bottom: -21.45%;
+	display: grid;
+
+	grid-template-columns: 15% 22% 5% 14% 4% 6% 9% 25%;
+	grid-template-rows: 7% 9% 7% 16% 11% 6% 5% 39%;
+}
+
+.panel-7 #hand-container {
+	position: relative;
+
+	grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 8;
+	grid-row-end: 9;
+
+	bottom: 10%;
 }
 
 .panel-7 #hand {
 	position: absolute;
 
-	bottom: 0;
+	max-width: 100%;
+
+	z-index: 1;
+}
+
+.panel-7 #tray-container {
+	position: relative;
+
+	grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 6;
+	grid-row-end: 8;
 }
 
 .panel-7 #tray {
 	position: absolute;
 
-	top: 0;
-	left: 1%;
-
-	z-index: 1;
-}
-
-.panel-7 #bottle-and-orange {
-	position: absolute;
-
-	height: 205.992px;
-	width: 275.385px;
-
-	top: 25%;
-	left: 12.86%;
+	max-width: 439px;
+	max-height: 100%;
 
 	z-index: 2;
 }
 
-.panel-7 #orange {
-	position: absolute;
+.panel-7 #orange-container {
+	position: relative;
 
-	bottom: 0;
-	left: 41.49%;
+	grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 5;
+	grid-row-end: 7;
+
+	z-index: 3;
+}
+
+.panel-7 #orange {
+
+	max-width: 104px;
+	max-height: 100%;
+
+	z-index: 3;
+}
+
+.panel-7 #bottle-container {
+	position: relative;
+
+	grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 4;
+	grid-row-end: 5;
+
+	top: 4%;
 }
 
 .panel-7 #bottle-7 {
 	position: absolute;
 
-	top: 0;
+	max-width: 272px;
+	max-height: 100%;
+
+	z-index: 2;
 }
 
-.panel-7 #coup-rock-and-lime {
-	position: absolute;
+.panel-7 #coup-container {
+	position: relative;
 
-	height: 146.058px;
-	width: 112.035px;
-
-	top: 1.5%;
-	left: 41.34%;
+	grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+	grid-row-end: 4;
 }
 
 .panel-7 #coup-7 {
 	position: absolute;
 
-	bottom: 0;
-	left: 0;
+	max-width: 83px;
+	max-height: 100%;
+
+	z-index: 2;
+
+	top: 4%;
+}
+
+.panel-7 #rock-container {
+	position: relative;
+
+	grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 3;
+	grid-row-end: 4;
 }
 
 .panel-7 #rock {
 	position: absolute;
 
-	bottom: -1%;
-	right: 0;
+	max-width: 46px;
+	max-height: 100%;
+
+	z-index: 2;
+
+	top: 8%;
+}
+
+.panel-7 #lime-container {
+	position: relative;
+
+	grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+	grid-row-end: 2;
+
+	top: 8%;
 }
 
 .panel-7 #lime {
 	position: absolute;
 
-	top: 0;
+	max-width: 81px;
+	max-height: 100%;
+
+	z-index: 2;
 }
 
 /* Panel 6 */
@@ -824,8 +896,7 @@ img#scroll-to-discover-mobile {
 	}
 
 	.panel-7 .animation-items {
-		left: unset;
-		zoom: 1.5;
+		width: 58%;
 	}
 
 	.panel-7 .learn-more-text-box {
