@@ -251,68 +251,70 @@ img#scroll-to-discover-mobile {
 .panel-3 .animation-items {
 	position: relative;
 
-	width: 69%;
+	max-width: 533px;
 	height: 85%;
 
-	top: 15%;
-	left: 22%;
+	display: grid;
+
+	grid-template-columns: 13% 27% 6% 11% 19% 3% 21%;
+	grid-template-rows: 39% 36% 3% 11% 6% 5%;
 }
 
 #panel-3-animation-items {
 	perspective: 40px;
 }
 
-.panel-3 #bottle-and-peel {
-	position: absolute;
+.panel-3 #bottle-container {
+	position: relative;
 
-	width: 55%;
-	height: 90%;
-
-	right: 0;
-
-	perspective: 80px;
+	grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 5;
 
 	transition: transform 0.5s;
 	transform-style: preserve-3d;
+
+	perspective: 80px;
 }
 
 .panel-3 #bottle {
 	position: absolute;
 	z-index: 1;
 
+	max-width: 180px;
+	max-height: 100%;
+
 	transition: transform 0.5s;
+}
 
-	display: inline-block;
+.panel-3 #peel-container {
+	position: relative;
 
-	width: 62%;
-	height: auto;
-
-	bottom: 0;
+	grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end: 5;
 }
 
 .panel-3 #peel {
 	position: absolute;
 
-	width: 44%;
-	height: auto;
-
-	bottom: 0;
-	right: 0;
+	max-width: 134px;
+	max-height: 100%;
 
 	z-index: 0;
 
 	transition: transform 0.5s;
-	display: inline-block;
 }
 
 .panel-3 #coup-and-lemon {
-	position: absolute;
+	position: relative;
 
-	width: 41%;
-	height: 54%;
-
-	left: 12.86%;
-	top: 39.52%;
+	grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 6;
 
 	perspective: 60px;
 
@@ -322,8 +324,8 @@ img#scroll-to-discover-mobile {
 .panel-3 #coup {
 	position: absolute;
 
-	width: 84%;
-	height: auto;
+	max-width: 195px;
+	max-height: 100%;
 
 	bottom: 0;
 	right: 0;
@@ -334,8 +336,8 @@ img#scroll-to-discover-mobile {
 .panel-3 #lemon {
 	position: absolute;
 
-	width: 40%;
-	height: auto;
+	max-width: 84px;
+	max-height: 48px;
 
 	top: 0;
 	left: 0;
@@ -343,14 +345,20 @@ img#scroll-to-discover-mobile {
 	z-index: 2;
 }
 
+.panel-3 #juniper-container {
+	position: relative;
+
+	grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 7;
+}
+
 .panel-3 #juniper {
 	position: absolute;
 
-	width: 38%;
-	height: auto;
-
-	bottom: 0;
-	left: 0;
+	max-width: 207px;
+	max-height: 100%;
 
 	z-index: 3;
 
@@ -438,7 +446,7 @@ img#scroll-to-discover-mobile {
   grid-row-start: 3;
 	grid-row-end: 5;
 	
-	max-width: 285px;
+	max-width: 280px;
 	max-height: 100%;
 
 	margin-left: 9%;
@@ -457,95 +465,6 @@ img#scroll-to-discover-mobile {
 
 	z-index: 0;
 }
-
-/* .panel-4 #bottle-spritz-and-shape {
-	position: absolute;
-
-	max-height: 660px;
-
-	width: 52%;
-	height: 91%;
-
-	left: 26%;
-	top: 0;
-}
-
-.panel-4 #bottle-spritz {
-	position: absolute;
-
-	width: 90%;
-	height: auto;
-
-	top: 0;
-	left: 10%;
-
-	z-index: 3;
-}
-
-.panel-4 #shape {
-	position: absolute;
-
-	width: 44%;
-	height: auto;
-
-	top: 23%;
-}
-
-.panel-4 #plant-and-rock-glass {
-	position: absolute;
-
-	width: 47%;
-	height: 75%;
-
-	top: 19%;
-	left: 53%;
-}
-
-.panel-4 #plant {
-	position: absolute;
-
-	width: 81%;
-	height: auto;
-
-	left: 0;
-	top: 0;
-}
-
-.panel-4 #rock-glass {
-	position: absolute;
-
-	width: 52%;
-	height: auto;
-
-	top: 40%;
-	left: 48%;
-
-	z-index: 1;
-}
-
-.panel-4 #highball-tonic{ 
-	position: absolute;
-
-	width: 43%;
-	height: auto;
-
-	left: 0%;
-	top: 28%;
-
-	z-index: 1;
-}
-
-.panel-4 #shadow {
-	position: absolute;
-
-	width: 97%;
-	height: auto;
-
-	top: 90%;
-	left: 3%;
-
-	z-index: 0;
-} */
 
 /* panel-7 */
 
