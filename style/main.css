@@ -248,71 +248,80 @@ img#scroll-to-discover-mobile {
 
 /* panel-3 */
 
+.panel-3 .animation-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 10%;
+}
+
 .panel-3 .animation-items {
 	position: relative;
 
-	width: 69%;
+	max-width: 533px;
 	height: 85%;
 
-	top: 15%;
-	left: 22%;
+	display: grid;
+
+	grid-template-columns: 13% 26% 6% 11% 19% 4% 21%;
+	grid-template-rows: 41% 34% 3% 11% 6% 5%;
 }
 
 #panel-3-animation-items {
 	perspective: 40px;
 }
 
-.panel-3 #bottle-and-peel {
-	position: absolute;
+.panel-3 #bottle-container {
+	position: relative;
 
-	width: 55%;
-	height: 90%;
-
-	right: 0;
-
-	perspective: 80px;
+	grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 5;
 
 	transition: transform 0.5s;
 	transform-style: preserve-3d;
+
+	perspective: 80px;
 }
 
 .panel-3 #bottle {
 	position: absolute;
 	z-index: 1;
 
+	max-width: 180px;
+	max-height: 100%;
+
 	transition: transform 0.5s;
+}
 
-	display: inline-block;
+.panel-3 #peel-container {
+	position: relative;
 
-	width: 62%;
-	height: auto;
-
-	bottom: 0;
+	grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end: 5;
 }
 
 .panel-3 #peel {
 	position: absolute;
 
-	width: 44%;
-	height: auto;
-
-	bottom: 0;
-	right: 0;
+	max-width: 134px;
+	max-height: 100%;
 
 	z-index: 0;
 
 	transition: transform 0.5s;
-	display: inline-block;
 }
 
 .panel-3 #coup-and-lemon {
-	position: absolute;
+	position: relative;
 
-	width: 41%;
-	height: 54%;
-
-	left: 12.86%;
-	top: 39.52%;
+	grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 6;
 
 	perspective: 60px;
 
@@ -322,8 +331,8 @@ img#scroll-to-discover-mobile {
 .panel-3 #coup {
 	position: absolute;
 
-	width: 84%;
-	height: auto;
+	max-width: 195px;
+	max-height: 100%;
 
 	bottom: 0;
 	right: 0;
@@ -334,8 +343,8 @@ img#scroll-to-discover-mobile {
 .panel-3 #lemon {
 	position: absolute;
 
-	width: 40%;
-	height: auto;
+	max-width: 84px;
+	max-height: 48px;
 
 	top: 0;
 	left: 0;
@@ -343,14 +352,20 @@ img#scroll-to-discover-mobile {
 	z-index: 2;
 }
 
+.panel-3 #juniper-container {
+	position: relative;
+
+	grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 7;
+}
+
 .panel-3 #juniper {
 	position: absolute;
 
-	width: 38%;
-	height: auto;
-
-	bottom: 0;
-	left: 0;
+	max-width: 207px;
+	max-height: 100%;
 
 	z-index: 3;
 
@@ -359,29 +374,38 @@ img#scroll-to-discover-mobile {
 
 /* panel-4 */
 
+.panel-4 .animation-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .panel-4 .animation-items {
 	position: relative;
 
-	width: 705.578px;
-	height: 680px;
+	max-width: 720px;
+	height: 85%;
 
-	top: 4%;
+	display: grid;
+
+	grid-template-columns: 3% 24% 17% 9% 26% 21%;
+	grid-template-rows: 19% 9% 62% 4% 3% 3%;
 }
 
 .panel-4 #bottle-spritz-and-shape {
-	position: absolute;
-
-	width: 371.692px;
-	height: 641.506px;
-
-	left: 26.08%;
-	bottom: 3.97%;
+	grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 6;
 }
 
 .panel-4 #bottle-spritz {
 	position: absolute;
 
-	left: 12.44%;
+	max-width: 337px;
+	max-height: 98%;
+
+	margin-left: 5%;
 
 	z-index: 3;
 }
@@ -389,143 +413,220 @@ img#scroll-to-discover-mobile {
 .panel-4 #shape {
 	position: absolute;
 
-	top: 22.74%;
+	max-width: 164px;
+	height: auto;
 
+	top: 23%;
 }
 
 .panel-4 #plant-and-rock-glass {
-	position: absolute;
+	position: relative;
 
-	width: 327.452px;
-	height: 514.235px;
-
-	top: 18.29%;
-	right: 0;
+	grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 5;
 }
 
 .panel-4 #plant {
 	position: absolute;
 
-	left: 0;
-	top: 0;
+	max-width: 275px;
+	max-height: 100%;
 }
 
 .panel-4 #rock-glass {
 	position: absolute;
 
-	right: 0;
-	bottom: 1%;
+	max-width: 179px;
+	max-height: 100%;
 
 	z-index: 1;
-}
-
-.panel-4 #highball-tonic{ 
-	position: absolute;
-
-	left: 0%;
-	top: 28%;
-
-	z-index: 1;
-}
-
-.panel-4 #shadow {
-	position: absolute;
 
 	bottom: 0;
 	right: 0;
+}
+
+.panel-4 #highball-tonic { 
+	grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+	grid-row-end: 5;
+	
+	max-width: 280px;
+	max-height: 100%;
+
+	margin-left: 9%;
+
+	z-index: 1;
+}
+
+.panel-4 #shadow { 
+	grid-column-start: 2;
+  grid-column-end: 7;
+  grid-row-start: 4;
+	grid-row-end: 7;
+	
+	max-width: 100%;
+	max-height: 107%;
 
 	z-index: 0;
 }
 
 /* panel-7 */
 
-.panel-7 .animation-items {
-	position: absolute;
-
-	width: 432.388px;
-	height: 619.763px;
-
-	bottom: 0;
-	left: 10%;
+.panel-7 .animation-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
-.panel-7 #hand-and-tray {
-	position: absolute;
+.panel-7 .animation-items {
+	position: relative;
 
-	width: 100%;
-	height: 428px;
+	max-width: 451px;
+	height: 90%;
 
-	bottom: -21.45%;
+	display: grid;
+
+	grid-template-columns: 15% 22% 5% 14% 4% 6% 9% 25%;
+	grid-template-rows: 7% 9% 7% 16% 11% 6% 5% 39%;
+}
+
+.panel-7 #hand-container {
+	position: relative;
+
+	grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 8;
+	grid-row-end: 9;
+
+	bottom: 10%;
 }
 
 .panel-7 #hand {
 	position: absolute;
 
-	bottom: 0;
+	max-width: 100%;
+
+	z-index: 1;
+}
+
+.panel-7 #tray-container {
+	position: relative;
+
+	grid-column-start: 1;
+  grid-column-end: 9;
+  grid-row-start: 6;
+	grid-row-end: 8;
 }
 
 .panel-7 #tray {
 	position: absolute;
 
-	top: 0;
-	left: 1%;
-
-	z-index: 1;
-}
-
-.panel-7 #bottle-and-orange {
-	position: absolute;
-
-	height: 205.992px;
-	width: 275.385px;
-
-	top: 25%;
-	left: 12.86%;
+	max-width: 439px;
+	max-height: 100%;
 
 	z-index: 2;
 }
 
-.panel-7 #orange {
-	position: absolute;
+.panel-7 #orange-container {
+	position: relative;
 
-	bottom: 0;
-	left: 41.49%;
+	grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 5;
+	grid-row-end: 7;
+
+	z-index: 3;
+}
+
+.panel-7 #orange {
+
+	max-width: 104px;
+	max-height: 100%;
+
+	z-index: 3;
+}
+
+.panel-7 #bottle-container {
+	position: relative;
+
+	grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 4;
+	grid-row-end: 5;
+
+	top: 4%;
 }
 
 .panel-7 #bottle-7 {
 	position: absolute;
 
-	top: 0;
+	max-width: 272px;
+	max-height: 100%;
+
+	z-index: 2;
 }
 
-.panel-7 #coup-rock-and-lime {
-	position: absolute;
+.panel-7 #coup-container {
+	position: relative;
 
-	height: 146.058px;
-	width: 112.035px;
-
-	top: 1.5%;
-	left: 41.34%;
+	grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+	grid-row-end: 4;
 }
 
 .panel-7 #coup-7 {
 	position: absolute;
 
-	bottom: 0;
-	left: 0;
+	max-width: 83px;
+	max-height: 100%;
+
+	z-index: 2;
+
+	top: 4%;
+}
+
+.panel-7 #rock-container {
+	position: relative;
+
+	grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 3;
+	grid-row-end: 4;
 }
 
 .panel-7 #rock {
 	position: absolute;
 
-	bottom: -1%;
-	right: 0;
+	max-width: 46px;
+	max-height: 100%;
+
+	z-index: 2;
+
+	top: 8%;
+}
+
+.panel-7 #lime-container {
+	position: relative;
+
+	grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+	grid-row-end: 2;
+
+	top: 8%;
 }
 
 .panel-7 #lime {
 	position: absolute;
 
-	top: 0;
+	max-width: 81px;
+	max-height: 100%;
+
+	z-index: 2;
 }
 
 /* Panel 6 */
@@ -795,8 +896,7 @@ img#scroll-to-discover-mobile {
 	}
 
 	.panel-7 .animation-items {
-		left: unset;
-		zoom: 1.5;
+		width: 58%;
 	}
 
 	.panel-7 .learn-more-text-box {
