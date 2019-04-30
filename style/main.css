@@ -676,13 +676,14 @@ img#scroll-to-discover-mobile {
 	background-color: #3e8988;
 }
 
-.row.panel-6 .text-container {
+.row.panel-6 .text-container-full {
 	display: flex;
 	flex-direction: column;
+
+	justify-content: space-around;
 	align-items: flex-start;
-	padding-left: 130px;
-	padding-right: 130px;
-	padding-top: 60px;
+
+	padding: 8% 8%;
 
 	color: #fdf7e4;
 }
@@ -715,34 +716,32 @@ img#scroll-to-discover-mobile {
 	line-height: 1.3;
 }
 
-.row.panel-6 .text-container .info-text h3 {
+.row.panel-6 .text-container-full .info-text h3 {
 	font-family: 'Akkurat-Bold';
 	font-size: 1.4vw;
 	line-height: 1.5;
 	font-weight: 100;
 }
 
-.row.panel-6 .text-container .info-text {
+.row.panel-6 .text-container-full .info-text {
 	max-width: 60%;
-	padding-bottom: 70px;
 }
 
 @media (max-width: 900px), (max-device-width: 900px) { 
-	.row.panel-6 .text-container .info-text {
+	.row.panel-6 .text-container-full .info-text {
 		max-width: 95%;
 	}
 
 	.row.panel-6 .companies {
-		flex-wrap: wrap;
-		flex-grow: 2;
-		padding-bottom: 50px;
+		flex-direction: column;
 	}
 
 	.row.panel-6 .companies .company { 
 		max-width: 85%;
+		padding: 3%;
 	}
 
-	.row.panel-6 .text-container .info-text h3 {
+	.row.panel-6 .text-container-full .info-text h3 {
 		font-size: 2.1vw;
 	}
 
