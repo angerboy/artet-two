@@ -509,11 +509,24 @@ img#scroll-to-discover-mobile {
 	justify-content: flex-end;
 }
 
-.panel-7 .animation-items {
-	position: relative;
-
+.panel-7 .animation-container-relative {
+	width: 80%;
 	max-width: 451px;
-	height: 90%;
+}
+
+.panel-7 .animation-box {
+	position: relative;
+	height: 0;
+	padding-top: 137%;
+}
+
+.panel-7 .animation-items {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 
 	display: grid;
 
@@ -920,18 +933,6 @@ img#scroll-to-discover-mobile {
 
 	.animation-items {
 		height: 100%;
-	}
-
-	.panel-7 .animation-items {
-		width: 58%;
-	}
-
-	.panel-7 .learn-more-text-box {
-		width: 500px;
-	}
-
-	.panel-7 .learn-more-text-box h2 {
-		font-size: 24pt;
 	}
 
 	.text-box {
