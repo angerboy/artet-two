@@ -195,7 +195,11 @@ img#scroll-to-discover-mobile {
 	display: none;
 }
 
-@media (max-width: 900px), (max-device-width: 900px) {
+/* @media (orientation: landscape) {
+
+} */
+
+@media (orientation: portrait) {
 
 	.content-container .row.landing-block {
 		/* justify-content: flex-start; */
@@ -252,14 +256,26 @@ img#scroll-to-discover-mobile {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-left: 10%;
+}
+
+.panel-3 .animation-container-relative {
+	width: 100%;
+	max-width: 533px;
+}
+
+.panel-3 .animation-box {
+	position: relative;
+	height: 0;
+	padding-top: 114%;
 }
 
 .panel-3 .animation-items {
-	position: relative;
+	position: absolute;
 
-	max-width: 533px;
-	height: 85%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 
 	display: grid;
 
@@ -331,7 +347,7 @@ img#scroll-to-discover-mobile {
 .panel-3 #coup {
 	position: absolute;
 
-	max-width: 195px;
+	max-width: 92%;
 	max-height: 100%;
 
 	bottom: 0;
@@ -343,7 +359,7 @@ img#scroll-to-discover-mobile {
 .panel-3 #lemon {
 	position: absolute;
 
-	max-width: 84px;
+	max-width: 37%;
 	max-height: 48px;
 
 	top: 0;
@@ -805,11 +821,11 @@ img#scroll-to-discover-mobile {
 
 @media (max-width: 900px), (max-device-width: 900px) {
 	.panel-3 .animation-items { 
-		width: 80%;
+		/* width: 80%;
 		left: unset;
 		top: unset;
 		bottom: 10%;
-		height: 100%;
+		height: 100%; */
 	}
 
 	.panel-3 #bottle-and-peel {	
@@ -861,7 +877,7 @@ img#scroll-to-discover-mobile {
 	}
 	
 	.landing-text-container p {
-		font-size: 14vw;
+		font-size: 13vw;
 	}
 
 	img#artet-cannabis-aperitif {
@@ -884,8 +900,7 @@ img#scroll-to-discover-mobile {
 
 	.animation-container {
 		order: 2;
-		flex: 1;
-		height: 50vh;
+		height: 60vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -908,7 +923,8 @@ img#scroll-to-discover-mobile {
 	}
 
 	.text-box {
-		width: 75%;
+		max-width: 75%;
+		width: unset;
 		height: auto;
 	}
 
@@ -917,7 +933,7 @@ img#scroll-to-discover-mobile {
 	}
 
 	.text-block .text-container .text-box p {
-		font-size: 4vw;
+		font-size: 3vw;
 		line-height: 1.4;
 	}
 
