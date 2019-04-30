@@ -390,17 +390,31 @@ img#scroll-to-discover-mobile {
 
 /* panel-4 */
 
+
 .panel-4 .animation-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.panel-4 .animation-items {
-	position: relative;
+.panel-4 .animation-container-relative {
+	width: 100%;
+	max-width: 721px;
+}
 
-	max-width: 720px;
-	height: 85%;
+.panel-4 .animation-box {
+	position: relative;
+	height: 0;
+	padding-top: 94%;
+}
+
+.panel-4 .animation-items {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 
 	display: grid;
 
@@ -429,8 +443,8 @@ img#scroll-to-discover-mobile {
 .panel-4 #shape {
 	position: absolute;
 
-	max-width: 164px;
-	height: auto;
+	max-width: 43%;
+	height: 19%;
 
 	top: 23%;
 }
@@ -454,7 +468,7 @@ img#scroll-to-discover-mobile {
 .panel-4 #rock-glass {
 	position: absolute;
 
-	max-width: 179px;
+	max-width: 52%;
 	max-height: 100%;
 
 	z-index: 1;
@@ -471,8 +485,6 @@ img#scroll-to-discover-mobile {
 	
 	max-width: 280px;
 	max-height: 100%;
-
-	margin-left: 9%;
 
 	z-index: 1;
 }
