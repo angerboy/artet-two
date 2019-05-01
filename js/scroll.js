@@ -1,13 +1,23 @@
 console.log("on load window.innerHeight: ", window.innerHeight);
 
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+setRowHeights(window.innerHeight);
+
+// let vh = window.innerHeight * 0.01;
+// document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 window.addEventListener('resize', () => {
 	console.log("resize window.innerHeight: ", window.innerHeight);
-	let vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	// let vh = window.innerHeight * 0.01;
+	// document.documentElement.style.setProperty('--vh', `${vh}px`);
+	setRowHeights(window.innerHeight);
 });
+
+function setRowHeights(height) {
+	var rows = Array.from(document.getElementsByClassName('row'));
+	rows.forEach(function(row) {
+		row.style.height = height + "px";
+	});
+}
 
 const idToAnimationClass = {
 	'coup': 'slide-in-left',
