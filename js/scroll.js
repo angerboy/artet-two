@@ -1,36 +1,7 @@
-// var height = window.innerHeight;
-//     var a = setInterval(function() {
-//         document.body.scrollTop = document.documentElement.scrollTop = -1;
-//         resize();
-//     }, 500); // Don't lower more than 500ms, otherwise there will be animation-problems with the  Safari toolbar
-
-//     window.addEventListener('resize', function() {
-//         resize();
-//     });
-
-//     var resize = function() {
-//         if(window.innerHeight != height) {
-// 			height = window.innerHeight;
-// 			// We execute the same script as before
-// 			let vh = height * 0.01;
-// 			document.documentElement.style.setProperty('--vh', `${vh}px`);
-//         }
-//     };
-
-
-// We listen to the resize event
 window.addEventListener('resize', () => {
-
-	
-	// We execute the same script as before
 	let vh = window.innerHeight * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
-
-// window.onresize = function() {
-//     document.body.height = window.innerHeight;
-// }
-// window.onresize(); // called to initially set the height.
 
 const idToAnimationClass = {
 	'coup': 'slide-in-left',

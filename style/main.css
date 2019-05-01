@@ -1,4 +1,4 @@
-/* < Fonts */
+/* < Fonts > */
 
 @font-face {
     font-family: 'Abuget';
@@ -24,10 +24,7 @@
 	src: url("../assets/Fonts/PetitSerifTrial-Regular.otf");
 }
 
-
-/* Fonts > */
-
-/* <Colors */
+/* < Colors > */
 
 .navy {
 
@@ -39,9 +36,7 @@
 	background-color: #fec542;
 }
 
-/* Colors> */
-
-/* <Background Images */
+/* <Background Images > */
 
 .content-container .image-block#bottle-on-stand {
 	background: url("../assets/Background/artet_001.jpg") center center / cover no-repeat;
@@ -73,7 +68,7 @@
 	background-color: #154c80;
 }
 
-/* Background Images> */
+/* STYLES */
 
 body {
 	background-color: transparent;
@@ -124,7 +119,7 @@ p {
 
 .content-container .row {
 	display: flex;
-	height: 100vh;
+	/* height: 100vh; */
   height: calc(var(--vh, 1vh) * 100);
 	width: 100vw;
 }
@@ -195,24 +190,7 @@ img#scroll-to-discover-mobile {
 	display: none;
 }
 
-/* @media (orientation: landscape) {
-
-} */
-
-@media (orientation: portrait) {
-
-	.content-container .row.landing-block {
-		/* justify-content: flex-start; */
-	}
-
-	#artet-cannabis-aperitif {
-		/* padding-top: 13%; */
-	}
-
-	.landing-text-container {
-		/* padding-top: 13%;
-		padding-bottom: 13%; */
-	}
+/* @media (orientation: portrait) {
 
 	#scroll-to-discover-mobile {
 		padding-bottom: 10%;
@@ -231,7 +209,7 @@ img#scroll-to-discover-mobile {
 		transform: translate(-35%,-50%);
 		width: 129%;
 	}
-}
+} */
 
 
 /* IMAGE BLOCKS */
@@ -841,41 +819,6 @@ img#scroll-to-discover-mobile {
 
 /* MEDIA QUERIES */
 
-/* PANEL 3 QUERIES */
-
-@media (max-width: 900px), (max-device-width: 900px) {
-	.panel-3 .animation-items { 
-		/* width: 80%;
-		left: unset;
-		top: unset;
-		bottom: 10%;
-		height: 100%; */
-	}
-
-	.panel-3 #bottle-and-peel {	
-	}
-	
-	.panel-3 #bottle {
-
-	}
-	
-	.panel-3 #peel {
-	}
-	
-	.panel-3 #coup-and-lemon {
-	}
-	
-	.panel-3 #coup {
-	}
-	
-	.panel-3 #lemon {
-	}
-	
-	.panel-3 #juniper {
-	} 
-	
-}
-
 @media (max-width: 900px), (max-device-width: 900px) {
 
 	.position-indicator {
@@ -956,14 +899,6 @@ img#scroll-to-discover-mobile {
 
 /* ANIMATIONS */
 
-.panel-7 #orange {
-	/* Animation to spin and move the sphere */
-	/* -webkit-animation: spin 1000ms linear infinite;
-	-moz-animation: spin 1000ms linear infinite;
-	-ms-animation: spin 1000ms linear infinite;
-	animation: spin 1000ms linear infinite; */
-}
-
 /* Spinning the sphere using key frames */
 @-ms-keyframes spin {
   from { -ms-transform: rotate(0deg); }
@@ -981,7 +916,6 @@ img#scroll-to-discover-mobile {
   from { -webkit-transform: rotate(0deg); }
   to { -webkit-transform: rotate(360deg); }
 }
-
 
 /**
  * ----------------------------------------
@@ -1146,8 +1080,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	/* transition: transform 0.5s; */
 }
 
 .age-verification .wing {
@@ -1224,18 +1156,6 @@ body {
 }
 
 @media (max-width: 700px), (max-device-width: 700px) {
-	.age-verification .wing {
-		/* height: 900px; */
-	}
-
-	.age-verification .left-wing {
-		/* transform: translate(55%, -15%); */
-	}
-	
-	.age-verification .right-wing {
-		/* transform: translate(-55%, -15%); */
-	}
-	
 	.age-verification .content-box {
 		width: 90%;	
 	}
@@ -1257,13 +1177,10 @@ body {
 	}
 
 	.age-verification .content-box .text-and-buttons .buttons button {
-		/* width: 400px;
-		height: 80px; */
 		margin-bottom: 10%;
 	}
 
 	.age-verification .content-box .logo img {
-		/* width: 300px;  */
 		height: auto;
 	}
 	
