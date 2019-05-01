@@ -119,7 +119,6 @@ p {
 
 .content-container .row {
 	display: flex;
-	/* height: 100vh; */
   height: calc(var(--vh, 1vh) * 100);
 	width: 100vw;
 }
@@ -706,6 +705,7 @@ img#scroll-to-discover-mobile {
 }
 
 @media (max-width: 900px), (max-device-width: 900px) { 
+
 	.row.panel-6 .text-container-full .info-text {
 		max-width: 95%;
 	}
