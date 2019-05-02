@@ -1044,6 +1044,7 @@ img#scroll-to-discover-mobile {
 
 body {
 	overflow: hidden;
+	position: fixed;
 }
 
 .content-container {
@@ -1059,7 +1060,6 @@ body {
 }
 
 .row {
-	/* height: 100vh; */
 	overflow: hidden;
 	cursor: default;
 }
