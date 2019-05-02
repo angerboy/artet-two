@@ -173,7 +173,7 @@ var positionIndicator = document.getElementById('position-indicator');
 				}
 				if (obj.id === 'content-container') {
 					if (swdir === 'up') {
-						scdir = swdir;
+						scdir = swdir
 						_scrollY(obj);
 					} else if (swdir === 'down' && obj.style.transform !== 'translateY(0)') {
 						scdir = swdir;
