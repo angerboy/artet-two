@@ -1,21 +1,21 @@
-console.log("on load window.innerHeight: ", window.innerHeight);
+var INNER_HEIGHT = window.innerHeight;
 
-setRowHeights(window.innerHeight);
+console.log("on load window.innerHeight: ", INNER_HEIGHT );
+setRowHeights();
 
 // let vh = window.innerHeight * 0.01;
 // document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 window.addEventListener('resize', () => {
-	console.log("resize window.innerHeight: ", window.innerHeight);
-	// let vh = window.innerHeight * 0.01;
-	// document.documentElement.style.setProperty('--vh', `${vh}px`);
-	setRowHeights(window.innerHeight);
+	INNER_HEIGHT = window.innerHeight;
+	console.log("resize window.innerHeight: ", INNER_HEIGHT );
+	setRowHeights();
 });
 
 function setRowHeights(height) {
 	var rows = Array.from(document.getElementsByClassName('row'));
 	rows.forEach(function(row) {
-		row.style.height = height + "px";
+		row.style.height = INNER_HEIGHT + "px";
 	});
 }
 
@@ -37,18 +37,23 @@ var positionIndicator = document.getElementById('position-indicator');
 		scdir, hold = false;
 
 	function _scrollY(obj) {
-		var slength, plength, pan, step = 100,
-			vh = window.innerHeight / 100,
+		var slength, plength, pan, step = INNER_HEIGHT,
+			vh = INNER_HEIGHT / 100,
 			vmin = Math.min(window.innerHeight, window.innerWidth) / 100;
     
 		if ((this !== undefined && this.id === 'content-container') || (obj !== undefined && obj.id === 'content-container')) {
 			pan = this || obj;
-			plength = parseInt(pan.offsetHeight / vh);
+			console.log("offsetHeight: ", pan.offsetHeight);
+			plength = parseInt(pan.offsetHeight);
 		}
     
 		if (pan === undefined) {
 			return;
 		}
+
+		console.log("vmin: ", vmin);
+		console.log("pan.offsetHeight: ", pan.offsetHeight);
+		console.log("vh: ", vh);
     
 		plength = plength || parseInt(pan.offsetHeight / vmin);
 		slength = parseInt(pan.style.transform.replace('translateY(', ''));
@@ -61,11 +66,14 @@ var positionIndicator = document.getElementById('position-indicator');
 			slength = 0;
 		}
 
-		const panelNumber = 1 + (Math.abs(slength) / 100);
+		const panelNumber = 1 + (Math.abs(slength) / step);
 		animatePanel(panelNumber);
 		animatePositionIndicator(panelNumber);
 
-		pan.style.transform = 'translateY(' + slength + 'vh)';
+		console.log("slength: ", slength);
+		console.log("plength: ", plength);
+
+		pan.style.transform = 'translateY(' + slength + 'px)';
 		pan.removeEventListener('wheel', _scrollY);
 
 		setTimeout(function() {
