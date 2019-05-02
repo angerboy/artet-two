@@ -3,9 +3,6 @@ var INNER_HEIGHT = window.innerHeight;
 console.log("on load window.innerHeight: ", INNER_HEIGHT );
 setRowHeights();
 
-// let vh = window.innerHeight * 0.01;
-// document.documentElement.style.setProperty('--vh', `${vh}px`);
-
 window.addEventListener('resize', () => {
 	INNER_HEIGHT = window.innerHeight;
 	console.log("resize window.innerHeight: ", INNER_HEIGHT );
@@ -160,7 +157,7 @@ var positionIndicator = document.getElementById('position-indicator');
 
 		obj.addEventListener('touchmove', function(e) {
 			e.preventDefault(); /*[prevent scrolling when inside DIV]*/
-		}, false);
+		}, { passive: false });
 
 		obj.addEventListener('touchend', function(e) {
 			var tchs = e.changedTouches[0];
