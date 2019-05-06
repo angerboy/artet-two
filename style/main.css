@@ -432,6 +432,10 @@ img#scroll-to-discover-mobile {
 }
 
 .panel-4 #highball-tonic { 
+
+	position: absolute;
+	bottom: 0;
+
 	grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 3;
