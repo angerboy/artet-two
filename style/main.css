@@ -210,6 +210,7 @@ img#scroll-to-discover-mobile {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
 .panel-3 .animation-container-relative {
@@ -352,7 +353,7 @@ img#scroll-to-discover-mobile {
 }
 
 .panel-4 .animation-container-relative {
-	width: 100%;
+	width: 88%;
 	max-width: 721px;
 }
 
