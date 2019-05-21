@@ -838,6 +838,14 @@ img#scroll-to-discover-mobile {
 
 	padding-top: 0.2em;
 	padding-bottom: 0.2em;
+
+	display: inline-block;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+.submit::-moz-focus-inner { 
+	border: 0;
 }
 
 .footer input::placeholder {
@@ -860,6 +868,7 @@ img#scroll-to-discover-mobile {
 	background-color: transparent;
 
 	width: 10vw;
+	height: 100%;
 }
 
 /* MEDIA QUERIES */
@@ -1309,6 +1318,10 @@ body {
 
 	.footer input {
 		font-size: 2vw;
+	}
+
+	.footer .submit-button-container input {
+		height: 55px;
 	}
 	
 	.footer .text-and-email p {
