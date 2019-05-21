@@ -462,6 +462,16 @@ img#scroll-to-discover-mobile {
 
 /* panel-7 */
 
+.panel-7 {
+	flex-direction: column;
+}
+
+.panel-7 .panel-content-container {
+	display: flex;
+	width: 100vw;
+	height: calc(100% - 100px);
+}
+
 .panel-7 .animation-container {
 	display: flex;
 	flex-direction: column;
@@ -800,8 +810,8 @@ img#scroll-to-discover-mobile {
 }
 
 .footer {
-	position: absolute;
-	bottom: 0;
+	/* position: absolute; */
+	/* bottom: 0; */
 
 	height: 100px;
 	width: 100%;
@@ -1293,6 +1303,11 @@ body {
 	.footer {
 		height: 25vh;
 		flex-direction: column;
+	}
+
+	.panel-7 .panel-content-container {
+		flex-direction: column;
+		height: calc(100% - 25vh);
 	}
 	
 	.footer .text-and-email {
