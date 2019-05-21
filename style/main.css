@@ -834,6 +834,10 @@ img#scroll-to-discover-mobile {
 	font-family: 'PetitSerif';
 	letter-spacing: 0.2em;
 	font-size: 1vw;
+	border-radius: unset;
+
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
 }
 
 .footer input::placeholder {
@@ -856,7 +860,6 @@ img#scroll-to-discover-mobile {
 	background-color: transparent;
 
 	width: 10vw;
-	height: 54px;
 }
 
 /* MEDIA QUERIES */
@@ -919,6 +922,10 @@ img#scroll-to-discover-mobile {
 		justify-content: center;
 		align-items: center;
 		padding: 10%;
+	}
+
+	.panel-7 .animation-container {
+		height: 40%;
 	}
 
 	.animation-items {
