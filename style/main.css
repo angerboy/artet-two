@@ -648,52 +648,29 @@ img#scroll-to-discover-mobile {
 .row.panel-6 .text-container-full {
 	display: flex;
 	flex-direction: column;
-
 	justify-content: space-around;
-	align-items: flex-start;
+	align-items: center;
 
-	padding: 8% 8%;
+	width: 100%;
 
 	color: #fdf7e4;
 }
 
-.row.panel-6 .companies {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
-
-.row.panel-6 .companies .company {
-	max-width: 28%;
-}
-
-.row.panel-6 .companies .separator {
-	width: 27px;
-	height: 3px;
-
-	background-color: #fdf7e4;
-}
-
-.row.panel-6 .companies .company h4 {
-	font-family: 'Akkurat-Bold';
-	font-size: 1.1vw;
-}
-
-.row.panel-6 .companies .company p {
-	font-family: 'Akkurat';
-	font-size: 1.1vw;
-	line-height: 1.3;
-}
-
-.row.panel-6 .text-container-full .info-text h3 {
-	font-family: 'Akkurat-Bold';
-	font-size: 1.4vw;
-	line-height: 1.5;
-	font-weight: 100;
+.panel-6 .info-text h1 {
+	font-family: 'Abuget';
+	font-size: 48pt;
+	margin-bottom: 5%;
 }
 
 .row.panel-6 .text-container-full .info-text {
-	max-width: 60%;
+	max-width: 475px;
+	text-align: center;
+}
+
+.row.panel-6 .text-container-full .info-text p {
+	font-family: 'Akkurat';
+	font-size: 12pt;
+	line-height: 1.6;
 }
 
 @media (max-width: 900px), (max-device-width: 900px) and (orientation: portrait) { 
