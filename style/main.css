@@ -643,6 +643,8 @@ img#scroll-to-discover-mobile {
 
 .row.panel-6 {
 	background-color: #3e8988;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .row.panel-6 .text-container-full {
@@ -907,12 +909,12 @@ img#scroll-to-discover-mobile {
 	.text-container {
 		order: 1;
 		flex: 1;
-		height: 50vh;
+		height: 40%;
 	}
 
 	.animation-container {
 		order: 2;
-		height: 60vh;
+		height: 60%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
