@@ -1,11 +1,9 @@
 var INNER_HEIGHT = window.innerHeight;
 
-console.log("on load window.innerHeight: ", INNER_HEIGHT );
 setRowHeights();
 
 window.addEventListener('resize', () => {
 	INNER_HEIGHT = window.innerHeight;
-	console.log("resize window.innerHeight: ", INNER_HEIGHT );
 	setRowHeights();
 });
 
@@ -40,17 +38,12 @@ var positionIndicator = document.getElementById('position-indicator');
     
 		if ((this !== undefined && this.id === 'content-container') || (obj !== undefined && obj.id === 'content-container')) {
 			pan = this || obj;
-			console.log("offsetHeight: ", pan.offsetHeight);
 			plength = parseInt(pan.offsetHeight);
 		}
     
 		if (pan === undefined) {
 			return;
 		}
-
-		console.log("vmin: ", vmin);
-		console.log("pan.offsetHeight: ", pan.offsetHeight);
-		console.log("vh: ", vh);
     
 		plength = plength || parseInt(pan.offsetHeight / vmin);
 		slength = parseInt(pan.style.transform.replace('translateY(', ''));
@@ -66,9 +59,6 @@ var positionIndicator = document.getElementById('position-indicator');
 		const panelNumber = 1 + (Math.abs(slength) / step);
 		animatePanel(panelNumber);
 		animatePositionIndicator(panelNumber);
-
-		console.log("slength: ", slength);
-		console.log("plength: ", plength);
 
 		pan.style.transform = 'translateY(' + slength + 'px)';
 		pan.removeEventListener('wheel', _scrollY);
@@ -200,6 +190,6 @@ var positionIndicator = document.getElementById('position-indicator');
 	});
 
 	container.addEventListener('wheel', _scrollY);
-	_swipe(container);
+	// _swipe(container);
 
 })();
