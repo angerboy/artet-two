@@ -984,7 +984,7 @@ img#scroll-to-discover-mobile {
 
 /* ANIMATIONS */
 
-/* Spinning the sphere using key frames */
+/* Spinning the sphere using key frames
 @-ms-keyframes spin {
   from { -ms-transform: rotate(0deg); }
   to { -ms-transform: rotate(360deg); }
@@ -1000,7 +1000,7 @@ img#scroll-to-discover-mobile {
 @-webkit-keyframes spin {
   from { -webkit-transform: rotate(0deg); }
   to { -webkit-transform: rotate(360deg); }
-}
+} */
 
 /**
  * ----------------------------------------
@@ -1272,4 +1272,24 @@ body {
 	.age-verification .content-box .logo img {
 		height: auto;
 	}							
+}
+
+/* MOBILE UNSET */
+
+@media only screen and (min-device-width: 320px) 
+                   and (max-device-width: 900px) 
+									 and (orientation: portrait) {
+	body {
+		overflow: unset;
+		position: unset;
+	}
+}
+
+@media only screen and (min-device-width: 320px) 
+                   and (max-device-width: 900px) 
+									 and (orientation: landscape) {
+	body {
+		overflow: unset;
+		position: unset;
+	}
 }
