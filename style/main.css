@@ -479,7 +479,8 @@ img#scroll-to-discover-mobile {
 }
 
 .panel-7 .animation-container-relative {
-	width: 80%;
+	margin-left: 15%;
+	width: 25vw;
 	max-width: 451px;
 }
 
@@ -700,6 +701,11 @@ img#scroll-to-discover-mobile {
 
 	.row.panel-6 .companies .company p {
 		font-size: 2.3vw;
+	}
+
+	.panel-7 .animation-container-relative {
+		width: 80%;
+		max-width: 451px;
 	}
 	
 }
