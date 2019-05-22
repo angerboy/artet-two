@@ -27,9 +27,6 @@ function over21() {
     ageVerificationDiv.className = "age-verification hidden";
     sidebar.className = "position-indicator visible";
 
-    document.body.style.overflow = 'unset';
-    document.body.style.position = 'unset';
-
     document.cookie = "verified=true";
 
     fadeInLandingBlock();
@@ -40,6 +37,9 @@ function under21() {
 }
 
 function fadeInLandingBlock() {
+    document.body.style.overflow = 'unset';
+    document.body.style.position = 'unset';
+
     const logo = document.getElementById('artet-cannabis-aperitif');
     const text = document.getElementById('landing-block-text');
     const scroll = document.getElementById('scroll-to-discover');
