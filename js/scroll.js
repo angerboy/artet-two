@@ -123,54 +123,85 @@ var positionIndicator = document.getElementById('position-indicator');
 
 	/*[swipe detection on touchscreen devices]*/
 	function _swipe(obj) {
-		var swdir,
-			sX,
-			sY,
-			dX,
-			dY,
-			threshold = 10,
-			/*[min distance traveled to be considered swipe]*/
-			slack = 50,
-			/*[max distance allowed at the same time in perpendicular direction]*/
-			alT = 500,
-			/*[max time allowed to travel that distance]*/
-			elT, /*[elapsed time]*/
-			stT; /*[start time]*/
-		obj.addEventListener('touchstart', function(e) {
-			var tchs = e.changedTouches[0];
-			swdir = 'none';
-			sX = tchs.pageX;
-			sY = tchs.pageY;
-			stT = new Date().getTime();
-			e.preventDefault();
-		}, false);
+		// var swdir,
+		// 	sX,
+		// 	sY,
+		// 	dX,
+		// 	dY,
+		// 	threshold = 10,
+		// 	/*[min distance traveled to be considered swipe]*/
+		// 	slack = 50,
+		// 	/*[max distance allowed at the same time in perpendicular direction]*/
+		// 	alT = 500,
+		// 	/*[max time allowed to travel that distance]*/
+		// 	elT, /*[elapsed time]*/
+		// 	stT; /*[start time]*/
+		// obj.addEventListener('touchstart', function(e) {
+		// 	var tchs = e.changedTouches[0];
+		// 	swdir = 'none';
+		// 	sX = tchs.pageX;
+		// 	sY = tchs.pageY;
+		// 	stT = new Date().getTime();
+		// 	e.preventDefault();
+		// }, false);
+
+		// obj.addEventListener('touchmove', function(e) {
+		// 	e.preventDefault(); /*[prevent scrolling when inside DIV]*/
+		// }, { passive: false });
+
+		// obj.addEventListener('touchend', function(e) {
+		// 	var tchs = e.changedTouches[0];
+		// 	dX = tchs.pageX - sX;
+		// 	dY = tchs.pageY - sY;
+		// 	elT = new Date().getTime() - stT;
+		// 	if (elT <= alT) {
+		// 		if (Math.abs(dX) >= threshold && Math.abs(dY) <= slack) {
+
+		// 			swdir = (dX < 0) ? 'left' : 'right';
+		// 		} else if (Math.abs(dY) >= threshold && Math.abs(dX) <= slack) {
+		// 			swdir = (dY < 0) ? 'up' : 'down';
+		// 		}
+		// 		if (obj.id === 'content-container') {
+		// 			if (swdir === 'up') {
+		// 				scdir = swdir
+		// 				_scrollY(obj);
+		// 			} else if (swdir === 'down' && obj.style.transform !== 'translateY(0)') {
+		// 				scdir = swdir;
+		// 				_scrollY(obj);
+
+		// 			}
+		// 			e.stopPropagation();
+		// 		}
+		// 	}
+		// }, false);
+
+		function isInViewport(element) {
+			var rect = element.getBoundingClientRect();
+			var windowHeight = window.innerHeight;
+			var windowWidth = window.innerWidth;
+
+			var vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+			var horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+			return (vertInView && horInView);
+		}
+
+		var isPanel3Visible = false;
+		var isPanel4Visible = false;
+
+		var panel3 = document.getElementById('panel-3-animation-items');
+		var panel4 = document.getElementById('panel-4-animation-items');
 
 		obj.addEventListener('touchmove', function(e) {
-			e.preventDefault(); /*[prevent scrolling when inside DIV]*/
-		}, { passive: false });
-
-		obj.addEventListener('touchend', function(e) {
-			var tchs = e.changedTouches[0];
-			dX = tchs.pageX - sX;
-			dY = tchs.pageY - sY;
-			elT = new Date().getTime() - stT;
-			if (elT <= alT) {
-				if (Math.abs(dX) >= threshold && Math.abs(dY) <= slack) {
-
-					swdir = (dX < 0) ? 'left' : 'right';
-				} else if (Math.abs(dY) >= threshold && Math.abs(dX) <= slack) {
-					swdir = (dY < 0) ? 'up' : 'down';
+			if(isInViewport(panel3)) {
+				if(!isPanel3Visible) {
+					isPanel3Visible = true;
+					animatePanel(3);
 				}
-				if (obj.id === 'content-container') {
-					if (swdir === 'up') {
-						scdir = swdir
-						_scrollY(obj);
-					} else if (swdir === 'down' && obj.style.transform !== 'translateY(0)') {
-						scdir = swdir;
-						_scrollY(obj);
-
-					}
-					e.stopPropagation();
+			}
+			if(isInViewport(panel4)) {
+				if(!isPanel4Visible) {
+					isPanel4Visible = true;
+					animatePanel(4);
 				}
 			}
 		}, false);
@@ -190,6 +221,6 @@ var positionIndicator = document.getElementById('position-indicator');
 	});
 
 	container.addEventListener('wheel', _scrollY);
-	// _swipe(container);
+	_swipe(container);
 
 })();
