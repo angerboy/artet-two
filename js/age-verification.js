@@ -26,7 +26,9 @@ function over21() {
 
     ageVerificationDiv.className = "age-verification hidden";
     sidebar.className = "position-indicator visible";
+
     document.body.style.overflow = 'unset';
+    document.body.style.position = 'unset';
 
     document.cookie = "verified=true";
 

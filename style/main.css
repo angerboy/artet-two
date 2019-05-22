@@ -1299,10 +1299,6 @@ body {
 		display: none;	
 	}
 
-	body {
-		position: unset;
-	}
-
 	.footer {
 		height: 25vh;
 		flex-direction: column;
@@ -1348,10 +1344,6 @@ body {
 	.position-indicator {
 		display: none;	
 	}
-
-	body {
-		position: unset;
-	}
 }
 
 @media only screen and (min-device-width: 320px) 
@@ -1359,9 +1351,5 @@ body {
 									 and (orientation: portrait) {
 	.position-indicator {
 		display: none;	
-	}
-
-	body {
-		position: unset;
 	}
 }
