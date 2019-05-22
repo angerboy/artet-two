@@ -80,6 +80,10 @@ var positionIndicator = document.getElementById('position-indicator');
 		animatedElements = [];
 
 		var panel = document.getElementById('panel-' + panelNumber);
+		var animationItems = document.getElementById('panel-' + panelNumber + '-animation-items');
+		if(animationItems !== undefined && animationItems !== null) {
+			animationItems.className = "animation-items visible";
+		}
 		if (panel !== undefined && panel !== null) {
 			var animatedDivs = Array.from(panel.getElementsByClassName("animated"));
 			animatedElements = animatedDivs
@@ -126,10 +130,7 @@ var positionIndicator = document.getElementById('position-indicator');
 			var rect = element.getBoundingClientRect();
 			var windowHeight = window.innerHeight;
 			var windowWidth = window.innerWidth;
-
-			var vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
-			var horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
-			return (vertInView && horInView);
+			return ((rect.left >= 0) && (rect.top >= 0) && ((rect.left + rect.width) <= windowWidth) && ((rect.top + rect.height) <= windowHeight));
 		}
 
 		var isPanel3Visible = false;
