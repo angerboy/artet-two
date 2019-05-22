@@ -1,11 +1,16 @@
 var INNER_HEIGHT = window.innerHeight;
 
+var positionIndicator = document.getElementById('position-indicator');
+const isMobile = positionIndicator.style.display === 'none';
+
 setRowHeights();
 
-window.addEventListener('resize', () => {
-	INNER_HEIGHT = window.innerHeight;
-	setRowHeights();
-});
+if(isMobile) {
+	window.addEventListener('resize', () => {
+		INNER_HEIGHT = window.innerHeight;
+		setRowHeights();
+	});
+}
 
 function setRowHeights(height) {
 	var rows = Array.from(document.getElementsByClassName('row'));
@@ -21,8 +26,6 @@ const idToAnimationClass = {
 	'highball-tonic': 'slide-in-left',
 	'bottle-spritz': 'slide-in-right'
 };
-
-var positionIndicator = document.getElementById('position-indicator');
 
 // Detect Scrolls/Swipes
 (function() {
