@@ -1334,37 +1334,6 @@ body {
 		height: 55px;
 	}
 	
-	.footer .text-and-email p {
-		/* font-family: 'PetitSerif';
-		font-size: 14px;
-		letter-spacing: 0.2em;
-		color: #fdf7e4; */
-	}
-	
-	.footer .text-and-email a {
-		/* font-family: 'PetitSerif';
-		font-size: 14px;
-		letter-spacing: 0.2em;
-		color: #fdf7e4;
-		text-decoration: none; */
-	}
-	
-	.footer .form-group {
-		/* display: flex; */
-	}
-	
-	.footer input {
-		/* height: 50px;
-		color: #fdf7e4;
-		font-family: 'PetitSerif';
-		font-size: 14px;
-		letter-spacing: 0.2em; */
-	}
-	
-	.footer input::placeholder {
-		/* color: #fdf7e4; */
-	}
-	
 	.footer .email-form-container input {	
 		width: 60vw;
 	}
@@ -1375,8 +1344,21 @@ body {
 }
 
 @media only screen and (min-device-width: 320px) 
-                   and (max-device-width: 900px) 
+                   and (max-device-width: 1366px) 
 									 and (orientation: landscape) {
+	.position-indicator {
+		display: none;	
+	}
+
+	body {
+		overflow: unset;
+		position: unset;
+	}
+}
+
+@media only screen and (min-device-width: 320px) 
+                   and (max-device-width: 1024px) 
+									 and (orientation: portrait) {
 	.position-indicator {
 		display: none;	
 	}
