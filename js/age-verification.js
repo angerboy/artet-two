@@ -1,4 +1,6 @@
 
+const isMobile = positionIndicator.style.display === 'none';
+
 if( document.readyState !== 'loading' ) {
     checkAge();
 } else {
@@ -37,8 +39,10 @@ function under21() {
 }
 
 function fadeInLandingBlock() {
-    document.body.style.overflow = 'unset';
-    document.body.style.position = 'unset';
+    if(isMobile) {
+        document.body.style.overflow = 'unset';
+        document.body.style.position = 'unset';
+    }
 
     const logo = document.getElementById('artet-cannabis-aperitif');
     const text = document.getElementById('landing-block-text');
