@@ -1,6 +1,3 @@
-
-const isMobile = positionIndicator.style.display === 'none';
-
 if( document.readyState !== 'loading' ) {
     checkAge();
 } else {
