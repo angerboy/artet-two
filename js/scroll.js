@@ -1,7 +1,8 @@
 var INNER_HEIGHT = window.innerHeight;
 
 var positionIndicator = document.getElementById('position-indicator');
-const isMobile = positionIndicator.style.display === 'none';
+var style = getComputedStyle(positionIndicator);
+const isMobile = style.display === 'none';
 
 setRowHeights();
 
