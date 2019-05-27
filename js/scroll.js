@@ -93,7 +93,11 @@ const idToAnimationClass = {
 			animatedElements = animatedDivs
 			if (animatedDivs !== undefined && animatedDivs !== null && animatedDivs.length > 0) {
 				animatedDivs.forEach(function(div) {
-					div.className += " " + idToAnimationClass[div.id];
+					var animationClassName = idToAnimationClass[div.id];
+					if(isMobile) {
+						animationClassName += "-mobile";
+					}
+					div.className += " " + animationClassName;
 				})
 			}
 		}
