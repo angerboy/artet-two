@@ -140,8 +140,8 @@ const idToAnimationClass = {
 		var isPanel3Visible = false;
 		var isPanel4Visible = false;
 
-		var panel3 = document.getElementById('panel-3-animation-items');
-		var panel4 = document.getElementById('panel-4-animation-items');
+		var panel3 = document.getElementById('lemon');
+		var panel4 = document.getElementById('shape');
 
 		function animatePanelsIfVisible() {
 			if(isInViewport(panel3)) {
