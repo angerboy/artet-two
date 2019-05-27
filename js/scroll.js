@@ -131,17 +131,21 @@ const idToAnimationClass = {
 
 	function _swipe(obj) {
 		function isInViewport(element) {
+			// console.log(element.id);
 			var rect = element.getBoundingClientRect();
-			var windowHeight = window.innerHeight;
-			var windowWidth = window.innerWidth;
-			return ((rect.left >= 0) && (rect.top >= 0) && ((rect.left + rect.width) <= windowWidth) && ((rect.top + rect.height) <= windowHeight));
+			// console.log(rect.top - window.innerHeight);
+			return ((rect.top - window.innerHeight) <= 0)
+			// var rect = element.getBoundingClientRect();
+			// var windowHeight = window.innerHeight;
+			// // var windowWidth = window.innerWidth;
+			// return ((rect.top + rect.height) <= windowHeight);
 		}
 
 		var isPanel3Visible = false;
 		var isPanel4Visible = false;
 
-		var panel3 = document.getElementById('lemon');
-		var panel4 = document.getElementById('shape');
+		var panel3 = document.getElementById('panel-3-animation-items');
+		var panel4 = document.getElementById('panel-4-animation-items');
 
 		function animatePanelsIfVisible() {
 			if(isInViewport(panel3)) {
