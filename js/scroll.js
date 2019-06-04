@@ -135,14 +135,8 @@ const idToAnimationClass = {
 
 	function _swipe(obj) {
 		function isInViewport(element) {
-			// console.log(element.id);
 			var rect = element.getBoundingClientRect();
-			// console.log(rect.top - window.innerHeight);
 			return ((rect.top - window.innerHeight) <= 0)
-			// var rect = element.getBoundingClientRect();
-			// var windowHeight = window.innerHeight;
-			// // var windowWidth = window.innerWidth;
-			// return ((rect.top + rect.height) <= windowHeight);
 		}
 
 		var isPanel3Visible = false;
