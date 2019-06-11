@@ -148,14 +148,12 @@ const idToAnimationClass = {
 		function animatePanelsIfVisible() {
 			if(isInViewport(panel3)) {
 				if(!isPanel3Visible) {
-					console.log('panel 3 visible')
 					isPanel3Visible = true;
 					animatePanel(3);
 				}
 			}
 			if(isInViewport(panel4)) {
 				if(!isPanel4Visible) {
-					console.log('panel 4 visible')
 					isPanel4Visible = true;
 					animatePanel(4);
 				}
