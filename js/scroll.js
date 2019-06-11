@@ -13,7 +13,7 @@ if(isMobile) {
 	});
 }
 
-function setRowHeights(height) {
+function setRowHeights() {
 	var rows = Array.from(document.getElementsByClassName('row'));
 	rows.forEach(function(row) {
 		row.style.height = INNER_HEIGHT + "px";
@@ -133,33 +133,37 @@ const idToAnimationClass = {
 		}
 	}
 
+	function isInViewport(element) {
+		var rect = element.getBoundingClientRect();
+		return ((rect.top - window.innerHeight) <= 0)
+	}
+
+	var isPanel3Visible = false;
+	var isPanel4Visible = false;
+
+	var panel3 = document.getElementById('panel-3-animation-items');
+	var panel4 = document.getElementById('panel-4-animation-items');
+
+	function animatePanelsIfVisible() {
+		if(isInViewport(panel3)) {
+			if(!isPanel3Visible) {
+				isPanel3Visible = true;
+				animatePanel(3);
+			}
+		}
+		if(isInViewport(panel4)) {
+			if(!isPanel4Visible) {
+				isPanel4Visible = true;
+				animatePanel(4);
+			}
+		}
+	}
+
+	window.addEventListener('load', () => {
+		animatePanelsIfVisible();
+	});
+
 	function _swipe(obj) {
-		function isInViewport(element) {
-			var rect = element.getBoundingClientRect();
-			return ((rect.top - window.innerHeight) <= 0)
-		}
-
-		var isPanel3Visible = false;
-		var isPanel4Visible = false;
-
-		var panel3 = document.getElementById('panel-3-animation-items');
-		var panel4 = document.getElementById('panel-4-animation-items');
-
-		function animatePanelsIfVisible() {
-			if(isInViewport(panel3)) {
-				if(!isPanel3Visible) {
-					isPanel3Visible = true;
-					animatePanel(3);
-				}
-			}
-			if(isInViewport(panel4)) {
-				if(!isPanel4Visible) {
-					isPanel4Visible = true;
-					animatePanel(4);
-				}
-			}
-		}
-
 		obj.addEventListener('touchstart', function(e) {
 			animatePanelsIfVisible();
 		}, false);

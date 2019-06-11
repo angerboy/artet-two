@@ -675,6 +675,14 @@ img#scroll-to-discover-mobile {
 	line-height: 1.6;
 }
 
+.row.panel-6 .text-container-full .info-text p a {
+	font-family: 'Akkurat';
+	font-size: 12pt;
+	line-height: 1.6;
+	text-decoration: none;
+}
+
+
 @media (max-width: 900px), (max-device-width: 900px) and (orientation: portrait) { 
 
 	.row.panel-6 .text-container-full .info-text {
@@ -960,7 +968,7 @@ img#scroll-to-discover-mobile {
 	}
 
 	.text-block .text-container .text-box p {
-		font-size: 3vw;
+		font-size: 3.5vw;
 		line-height: 1.4;
 	}
 
