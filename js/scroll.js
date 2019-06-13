@@ -1,6 +1,7 @@
 window.onbeforeunload = function () {
 	console.log("scroll to top");
 	window.scrollTo(0, 0);
+	return null;
   }
 
 var INNER_HEIGHT = window.innerHeight;
