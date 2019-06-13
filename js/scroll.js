@@ -1,3 +1,7 @@
+window.onbeforeunload = function () {
+	window.scrollTo(0, 0);
+  }
+
 var INNER_HEIGHT = window.innerHeight;
 
 var positionIndicator = document.getElementById('position-indicator');
@@ -161,10 +165,6 @@ const idToAnimationClass = {
 			}
 		}
 	}
-
-	window.onload = () => {
-		window.scrollTo(0);
-	};
 
 	function _swipe(obj) {
 		obj.addEventListener('touchstart', function(e) {
