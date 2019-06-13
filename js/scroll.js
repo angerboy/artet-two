@@ -1,10 +1,12 @@
 window.onload = () => {
 	console.log("window load");
+	console.log("window scrollY: ", window.scrollY);
 	if(window.scrollY > 0) {
 		console.log("animate panels");
 		animatePanel(3);
 		animatePanel(4);
 	}
+	window.scrollTo(0,0);
 }
 
 var INNER_HEIGHT = window.innerHeight;
