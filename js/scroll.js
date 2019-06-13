@@ -163,18 +163,7 @@ const idToAnimationClass = {
 	}
 
 	window.onload = () => {
-		console.log("load");
-		window.requestAnimationFrame(() => {
-			checkReady();
-		})
-
-		function checkReady() {
-			if (document.readyState === "complete") {
-				animatePanelsIfVisible();
-			} else {
-				setTimeout(checkReady, 0);
-			}
-		}
+		window.scrollTo(0);
 	};
 
 	function _swipe(obj) {
