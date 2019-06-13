@@ -1,4 +1,5 @@
 window.onbeforeunload = function () {
+	console.log("scroll to top");
 	window.scrollTo(0, 0);
   }
 
