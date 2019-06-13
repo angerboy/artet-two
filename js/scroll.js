@@ -135,7 +135,8 @@ const idToAnimationClass = {
 
 	function isInViewport(element) {
 		var rect = element.getBoundingClientRect();
-		console.log("is element in viewport: ", ((rect.top - window.innerHeight) <= 0));
+		console.log("rect.top: ", rect.top);
+		console.log("window.innerHeight: ", window.innerHeight);
 		return ((rect.top - window.innerHeight) <= 0)
 	}
 
@@ -161,10 +162,10 @@ const idToAnimationClass = {
 		}
 	}
 
-	window.addEventListener('load', () => {
+	window.onload = () => {
 		console.log("load");
 		animatePanelsIfVisible();
-	});
+	};
 
 	function _swipe(obj) {
 		obj.addEventListener('touchstart', function(e) {
