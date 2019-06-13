@@ -686,28 +686,19 @@ img#scroll-to-discover-mobile {
 @media (max-width: 900px), (max-device-width: 900px) and (orientation: portrait) { 
 
 	.row.panel-6 .text-container-full .info-text {
-		max-width: 95%;
+		max-width: 75%;
 	}
 
-	.row.panel-6 .companies {
-		flex-direction: column;
+	.panel-6 .info-text h1 {
+		text-align: left;
+		font-size: 13vw;
 	}
 
-	.row.panel-6 .companies .company { 
-		max-width: 85%;
-		padding: 3%;
+	.row.panel-6 .text-container-full .info-text p {
+		font-size: 3.5vw;
 	}
-
-	.row.panel-6 .text-container-full .info-text h3 {
-		font-size: 2.1vw;
-	}
-
-	.row.panel-6 .companies .company h4 {
-		font-size: 3.1vw;
-	}
-
-	.row.panel-6 .companies .company p {
-		font-size: 2.3vw;
+	.row.panel-6 .text-container-full .info-text p a {
+		font-size: 3.5vw;
 	}
 
 	.panel-7 .animation-container-relative {
