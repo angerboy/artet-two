@@ -165,8 +165,16 @@ const idToAnimationClass = {
 	window.onload = () => {
 		console.log("load");
 		window.requestAnimationFrame(() => {
-			animatePanelsIfVisible();
+			checkReady();
 		})
+
+		function checkReady() {
+			if (document.readyState === "complete") {
+				animatePanelsIfVisible();
+			} else {
+				setTimeout(checkReady, 0);
+			}
+		}
 	};
 
 	function _swipe(obj) {
