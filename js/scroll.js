@@ -141,8 +141,6 @@ const idToAnimationClass = {
 
 	function isInViewport(element) {
 		var rect = element.getBoundingClientRect();
-		console.log("rect.top: ", rect.top);
-		console.log("window.innerHeight: ", window.innerHeight);
 		return ((rect.top - window.innerHeight) <= 0)
 	}
 
@@ -153,7 +151,6 @@ const idToAnimationClass = {
 	var panel4 = document.getElementById('panel-4-animation-items');
 
 	function animatePanelsIfVisible() {
-		console.log("animate panel");
 		if(isInViewport(panel3)) {
 			if(!isPanel3Visible) {
 				isPanel3Visible = true;
