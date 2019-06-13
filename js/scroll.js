@@ -1,14 +1,3 @@
-window.onload = () => {
-	console.log("document.body.scrollTop: ", document.body.scrollTop);
-	setTimeout(() => {
-		if(document.body.scrollTop > 0) {
-			console.log("animate panels");
-			animatePanel(3);
-			animatePanel(4);
-		}
-	}, 100);
-}
-
 var INNER_HEIGHT = window.innerHeight;
 
 var positionIndicator = document.getElementById('position-indicator');
@@ -199,5 +188,16 @@ const idToAnimationClass = {
 
 	container.addEventListener('wheel', _scrollY);
 	_swipe(container);
+
+	window.onload = () => {
+		console.log("document.body.scrollTop: ", document.body.scrollTop);
+		setTimeout(() => {
+			if(document.body.scrollTop > 0) {
+				console.log("animate panels");
+				animatePanel(3);
+				animatePanel(4);
+			}
+		}, 100);
+	}
 
 })();
