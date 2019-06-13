@@ -1,4 +1,5 @@
 window.onload = () => {
+	console.log("window load");
 	if(window.scrollY > 0) {
 		animatePanel(3);
 		animatePanel(4);
