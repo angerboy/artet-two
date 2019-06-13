@@ -130,6 +130,7 @@ p {
 .landing-text-container {
 	text-align: center;
 	width: 618px;
+	z-index: 100;
 }
 
 a {
@@ -858,7 +859,6 @@ img#scroll-to-discover-mobile {
 	}
 
 	.panel-6 .info-text h1 {
-		text-align: left;
 		font-size: 13vw;
 	}
 

@@ -194,8 +194,7 @@ const idToAnimationClass = {
 		setTimeout(() => {
 			if(document.body.scrollTop > 0) {
 				console.log("animate panels");
-				animatePanel(3);
-				animatePanel(4);
+				animatePanelsIfVisible();
 			}
 		}, 100);
 	}
