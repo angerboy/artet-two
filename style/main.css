@@ -827,7 +827,6 @@ img#scroll-to-discover-mobile {
 
 .footer input::placeholder {
 	color: #fdf7e4;
-	/* padding-left: 5%; */
 }
 
 .footer .email-form-container input {
@@ -853,10 +852,11 @@ img#scroll-to-discover-mobile {
 	font-family: 'PetitSerif';
 }
 
+
+/* MEDIA QUERIES */
+
 /* iPads Our Commitment Page */
-@media only screen and (min-device-width: 768px) 
-                   and (max-device-width: 1024px) 
-									 and (orientation: portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
 
 	.row.panel-6 .text-container-full .info-text {
 		max-width: 75%;
@@ -921,18 +921,31 @@ img#scroll-to-discover-mobile {
 
 }
 
-/* MEDIA QUERIES */
-
+/* mobile phones portrait */
 @media only screen and (max-device-width: 767px) and (orientation: portrait) {
 	.panel-7 .animation-container {
 		height: 40%;
 		padding: 10% 17% 0 17%;
 	}
+
+	.row.panel-6 .text-container-full .info-text {
+		max-width: 75%;
+	}
+
+	.panel-6 .info-text h1 {
+		font-size: 12vw;
+	}
+
+	.row.panel-6 .text-container-full .info-text p {
+		font-size: 3.2vw;
+	}
+	.row.panel-6 .text-container-full .info-text p a {
+		font-size: 3.2vw;
+	}
+
 }
 
-@media only screen and (min-device-width: 320px) 
-                   and (max-device-width: 900px) 
-									 and (orientation: portrait) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: portrait) {
 
 	.content-container .row.text-block-right.panel-3 {
 		background-image: none;
