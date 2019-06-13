@@ -814,6 +814,7 @@ img#scroll-to-discover-mobile {
 
 	padding-top: 0.2em;
 	padding-bottom: 0.2em;
+	padding-left: 5%;
 
 	display: inline-block;
 	border-radius: 0;
@@ -826,7 +827,7 @@ img#scroll-to-discover-mobile {
 
 .footer input::placeholder {
 	color: #fdf7e4;
-	padding-left: 5%;
+	/* padding-left: 5%; */
 }
 
 .footer .email-form-container input {
