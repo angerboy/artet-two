@@ -1,8 +1,9 @@
-window.onbeforeunload = () => {
-	console.log("scroll to top");
-	window.scrollTo(0, 0);
-	return null;
-  }
+window.onload = () => {
+	if(window.scrollY > 0) {
+		animatePanel(3);
+		animatePanel(4);
+	}
+}
 
 var INNER_HEIGHT = window.innerHeight;
 
