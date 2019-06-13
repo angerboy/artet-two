@@ -852,23 +852,29 @@ img#scroll-to-discover-mobile {
 	font-family: 'PetitSerif';
 }
 
-@media (max-width: 900px), (max-device-width: 900px) and (orientation: portrait) { 
+/* iPads Our Commitment Page */
+@media only screen and (min-device-width: 768px) 
+                   and (max-device-width: 1024px) 
+									 and (orientation: portrait) {
 
 	.row.panel-6 .text-container-full .info-text {
 		max-width: 75%;
 	}
 
 	.panel-6 .info-text h1 {
-		font-size: 13vw;
+		font-size: 12vw;
 	}
 
 	.row.panel-6 .text-container-full .info-text p {
-		font-size: 3.5vw;
+		font-size: 3.2vw;
 	}
 	.row.panel-6 .text-container-full .info-text p a {
-		font-size: 3.5vw;
+		font-size: 3.2vw;
 	}
 
+}
+
+@media (max-width: 900px), (max-device-width: 900px) and (orientation: portrait) { 
 	.panel-7 .animation-container-relative {
 		width: 80%;
 		max-width: 451px;
