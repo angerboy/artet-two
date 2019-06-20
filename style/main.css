@@ -506,7 +506,7 @@ img#scroll-to-discover-mobile {
 
 	.dose.single-dose {
 		height: 70%;
-		bottom: 16%;
+		bottom: 60%;
 		left: 13%;
 		width: 27%;
 	}
@@ -516,6 +516,40 @@ img#scroll-to-discover-mobile {
 		bottom: 96%;
 		left: 58%;
 		width: 27%;
+	}
+}
+
+/* mobile phones landscape */
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+	.content-container .row.panel-4 {
+		background: url("../assets/Background/artet_003.jpg") 70% 68% / 150% no-repeat;
+	}
+
+	.dose.single-dose {
+		height: 50%;
+		bottom: 25%;
+		left: 0%;
+		width: 27%;
+	}
+	
+	.dose.double-dose {
+		height: 35%;
+		bottom: 60%;
+		left: 58%;
+		width: 27%;
+	}
+
+	.panel-4 .text-box {
+		width: 75%;
+	}
+
+	.panel-4 .text-container-top .text-box h1 {
+		font-size: 8.5vw;
+	}
+
+	.panel-4 .text-box p {
+		font-size: 2.3vw;
+    	line-height: 1.4;
 	}
 }
 
