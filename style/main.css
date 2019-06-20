@@ -71,7 +71,7 @@
 }
 
 .content-container .row.panel-4 {
-	background: url("../assets/Background/artet_003.jpg") center center / cover no-repeat;
+	background: url("../assets/Background/artet_003.jpg") center 90% / cover no-repeat;
 }
 
 .content-container .row.text-block-left.panel-5 {
@@ -455,13 +455,13 @@ img#scroll-to-discover-mobile {
 
 .dose.single-dose {
 	height: 250px;
-	bottom: 42%;
+	bottom: 36%;
 	left: 5%;
 }
 
 .dose.double-dose {
 	height: 200px;
-	bottom: 70%;
+	bottom: 59%;
 	left: 49%;
 }
 
@@ -475,6 +475,48 @@ img#scroll-to-discover-mobile {
 	font-size: 11pt;
 	color: #FCF7E4;
 	font-family: 'MaisonNeue-Demi';
+}
+
+/* mobile phones portrait */
+@media only screen and (max-device-width: 767px) and (orientation: portrait) {
+	.dosing-container {
+		flex-direction: column;
+	}
+
+	.content-container .row.panel-4 {
+		background: url("../assets/Background/artet_003.jpg") 92% 90% / cover no-repeat;
+	}
+
+	.panel-4 .text-container-top .text-box h1 {
+		font-size: 12.5vw;
+	}
+
+	.panel-4 .text-box p {
+		font-size: 3.5vw;
+    	line-height: 1.4;
+	}
+
+	.dose .dose-text p {
+		font-size: 3.5vw;
+	}
+	
+	#dose-amount {
+		font-size: 3.5vw;
+	}
+
+	.dose.single-dose {
+		height: 70%;
+		bottom: 16%;
+		left: 13%;
+		width: 27%;
+	}
+	
+	.dose.double-dose {
+		height: 50%;
+		bottom: 96%;
+		left: 58%;
+		width: 27%;
+	}
 }
 
 /* panel-5 */
