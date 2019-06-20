@@ -23,6 +23,12 @@
 	src: url("../assets/Fonts/PetitSerifTrial-Regular.otf");
 }
 
+@font-face {
+	font-family: 'MaisonNeue';
+	font-weight: normal;
+	src: url("../assets/Fonts/MaisonNeue-Book.otf");
+}
+
 /* < Colors > */
 
 .navy {
@@ -58,7 +64,11 @@
 	background-attachment: static;
 }
 
-.content-container .row.text-block-left.panel-4 {
+.content-container .row.panel-4 {
+	background: url("../assets/Background/artet_003.jpg") center center / cover no-repeat;
+}
+
+.content-container .row.text-block-left.panel-5 {
 	background: url("../assets/PNG/Background/Panel_02_BG.png") center center / cover no-repeat;
 	background-attachment: static;
 }
@@ -204,6 +214,72 @@ img#scroll-to-discover-mobile {
 
 /* IMAGE POSITIONS */
 
+/* TEXT BLOCKS */
+
+.text-block {
+	display: flex;
+}
+
+.text-block-right {
+	padding-right: -15%;
+}
+.text-block-right .text-container {
+	margin-right: 15%;
+}
+.text-block-left {
+	padding-left: -15%;
+}
+.text-block-left .text-container {
+	margin-left: 15%;
+}
+
+.text-container {
+	display: flex;
+	align-items: center;
+	flex: 1;
+}
+
+.text-box.white h1, .text-box.white p, .learn-more-text-box.white h2  {
+	color: #fcf6e3;
+}
+
+.text-box.blue h1, .text-box.blue p {
+	color: #1a2943;
+}
+
+.text-box {
+	display: flex;
+	flex-direction: column;
+}
+
+.text-box h1 {
+	font-family: 'Abuget';
+	font-size: 48pt;
+}
+
+.text-box p {
+	font-family: 'Akkurat';
+	font-size: 12pt;
+	line-height: 1.6;
+
+	padding-top: 10px;
+}
+
+.learn-more-text-box h2 {
+	font-family: 'PetitSerif';
+	font-size: 12pt;
+	letter-spacing: 0.2em;
+
+	line-height: 2;
+	text-align: center;
+}
+
+.text-box {
+	width: 308px;
+	height: 260px;
+}
+
+
 /* panel-3 */
 
 .panel-3 .animation-container {
@@ -345,25 +421,70 @@ img#scroll-to-discover-mobile {
 
 /* panel-4 */
 
+.panel-4 .text-container-top {
+	display: flex;
+    align-items: flex-start;
+	flex: 1;
+	
+	margin-left: 5vw;
+    margin-top: 5vh;
+}
 
-.panel-4 .animation-container {
+.panel-4 .text-box p {
+	font-family: 'MaisonNeue';
+}
+
+.dosing-container {
+	display: flex;
+	position: relative;
+	flex: 1;
+}
+
+.dose {
+	position: absolute;
+	width: 130px;
+	border-left: 0.5pt solid #fdf7e4;
+	padding-left: 20px;
+}
+
+.dose.single-dose {
+	height: 250px;
+	bottom: 42%;
+	left: 5%;
+}
+
+.dose.double-dose {
+	height: 200px;
+	bottom: 70%;
+	left: 49%;
+}
+
+.dose .dose-text p {
+	font-size: 11pt;
+	color: #FCF7E4;
+	font-family: 'MaisonNeue';
+}
+
+/* panel-5 */
+
+.panel-5 .animation-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.panel-4 .animation-container-relative {
+.panel-5 .animation-container-relative {
 	width: 88%;
 	max-width: 721px;
 }
 
-.panel-4 .animation-box {
+.panel-5 .animation-box {
 	position: relative;
 	height: 0;
 	padding-top: 94%;
 }
 
-.panel-4 .animation-items {
+.panel-5 .animation-items {
 	position: absolute;
 
 	top: 0;
@@ -377,14 +498,14 @@ img#scroll-to-discover-mobile {
 	grid-template-rows: 19% 9% 62% 4% 3% 3%;
 }
 
-.panel-4 #bottle-spritz-and-shape {
+.panel-5 #bottle-spritz-and-shape {
 	grid-column-start: 3;
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 6;
 }
 
-.panel-4 #bottle-spritz {
+.panel-5 #bottle-spritz {
 	position: absolute;
 
 	max-width: 337px;
@@ -395,7 +516,7 @@ img#scroll-to-discover-mobile {
 	z-index: 3;
 }
 
-.panel-4 #shape {
+.panel-5 #shape {
 	position: absolute;
 
 	max-width: 43%;
@@ -404,7 +525,7 @@ img#scroll-to-discover-mobile {
 	top: 23%;
 }
 
-.panel-4 #plant-and-rock-glass {
+.panel-5 #plant-and-rock-glass {
 	position: relative;
 
 	grid-column-start: 5;
@@ -413,14 +534,14 @@ img#scroll-to-discover-mobile {
   grid-row-end: 5;
 }
 
-.panel-4 #plant {
+.panel-5 #plant {
 	position: absolute;
 
 	max-width: 275px;
 	max-height: 100%;
 }
 
-.panel-4 #rock-glass {
+.panel-5 #rock-glass {
 	position: absolute;
 
 	max-width: 52%;
@@ -432,7 +553,7 @@ img#scroll-to-discover-mobile {
 	right: 0;
 }
 
-.panel-4 #highball-tonic { 
+.panel-5 #highball-tonic { 
 
 	position: absolute;
 	bottom: 0;
@@ -448,7 +569,7 @@ img#scroll-to-discover-mobile {
 	z-index: 1;
 }
 
-.panel-4 #shadow { 
+.panel-5 #shadow { 
 	grid-column-start: 2;
   grid-column-end: 7;
   grid-row-start: 4;
@@ -692,71 +813,6 @@ img#scroll-to-discover-mobile {
 
 .animation-items {
 	height: 100vh;
-}
-
-/* TEXT BLOCKS */
-
-.text-block {
-	display: flex;
-}
-
-.text-block-right {
-	padding-right: -15%;
-}
-.text-block-right .text-container {
-	margin-right: 15%;
-}
-.text-block-left {
-	padding-left: -15%;
-}
-.text-block-left .text-container {
-	margin-left: 15%;
-}
-
-.text-container {
-	display: flex;
-	align-items: center;
-	flex: 1;
-}
-
-.text-box.white h1, .text-box.white p, .learn-more-text-box.white h2  {
-	color: #fcf6e3;
-}
-
-.text-box.blue h1, .text-box.blue p {
-	color: #1a2943;
-}
-
-.text-box {
-	display: flex;
-	flex-direction: column;
-}
-
-.text-box h1 {
-	font-family: 'Abuget';
-	font-size: 48pt;
-}
-
-.text-box p {
-	font-family: 'Akkurat';
-	font-size: 12pt;
-	line-height: 1.6;
-
-	padding-top: 10px;
-}
-
-.learn-more-text-box h2 {
-	font-family: 'PetitSerif';
-	font-size: 12pt;
-	letter-spacing: 0.2em;
-
-	line-height: 2;
-	text-align: center;
-}
-
-.text-box {
-	width: 308px;
-	height: 260px;
 }
 
 .learn-more-text-box {
