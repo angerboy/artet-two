@@ -553,6 +553,27 @@ img#scroll-to-discover-mobile {
 	}
 }
 
+/* iPads Our portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) { 
+	.content-container .row.panel-4 {
+		background: url("../assets/Background/artet_003.jpg") 81% 68% / cover no-repeat;
+	}
+
+	.dose.single-dose {
+		height: 50%;
+		bottom: 59%;
+		left: 39%;
+		width: 19%;
+	}
+	
+	.dose.double-dose {
+		height: 35%;
+		bottom: 98%;
+		left: 72%;
+		width: 18%;
+	}
+}
+
 /* panel-5 */
 
 .panel-5 .animation-container {
