@@ -29,6 +29,12 @@
 	src: url("../assets/Fonts/MaisonNeue-Book.otf");
 }
 
+@font-face {
+	font-family: 'MaisonNeue-Demi';
+	font-weight: normal;
+	src: url("../assets/Fonts/MaisonNeue-Demi.otf");
+}
+
 /* < Colors > */
 
 .navy {
@@ -442,7 +448,7 @@ img#scroll-to-discover-mobile {
 
 .dose {
 	position: absolute;
-	width: 130px;
+	width: 155px;
 	border-left: 0.5pt solid #fdf7e4;
 	padding-left: 20px;
 }
@@ -463,6 +469,12 @@ img#scroll-to-discover-mobile {
 	font-size: 11pt;
 	color: #FCF7E4;
 	font-family: 'MaisonNeue';
+}
+
+#dose-amount {
+	font-size: 11pt;
+	color: #FCF7E4;
+	font-family: 'MaisonNeue-Demi';
 }
 
 /* panel-5 */
