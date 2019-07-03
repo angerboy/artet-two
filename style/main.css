@@ -453,6 +453,10 @@ img#scroll-to-discover-mobile {
 	padding-left: 20px;
 }
 
+.dose-img {
+	padding-bottom: 5px;
+}
+
 .dose.single-dose {
 	height: 250px;
 	bottom: 40%;
@@ -469,6 +473,7 @@ img#scroll-to-discover-mobile {
 	font-size: 11pt;
 	color: #FCF7E4;
 	font-family: 'MaisonNeue';
+	line-height: 1.6;
 }
 
 #dose-amount {
