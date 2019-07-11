@@ -191,10 +191,8 @@ const idToAnimationClass = {
 	_swipe(container);
 
 	window.onload = () => {
-		console.log("document.body.scrollTop: ", document.body.scrollTop);
 		setTimeout(() => {
 			if(document.body.scrollTop > 0) {
-				console.log("animate panels");
 				animatePanelsIfVisible();
 			}
 		}, 100);
