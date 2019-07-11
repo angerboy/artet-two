@@ -118,10 +118,11 @@ const idToAnimationClass = {
 		1: 'assets/PNG/2x/position-indicator-1@2x.png',
 		2: 'hidden',
 		3: 'assets/PNG/2x/position-indicator-2@2x.png',
-		4: 'assets/PNG/2x/position-indicator-3@2x.png',
+		4: 'hidden',
 		5: 'hidden',
-		6: 'hidden',
-		7: 'assets/PNG/2x/position-indicator-4@2x.png'
+		6: 'assets/PNG/2x/position-indicator-3@2x.png',
+		7: 'assets/PNG/2x/position-indicator-4@2x.png',
+		9: 'hidden'
 	}
 
 	function animatePositionIndicator(panelNumber) {
