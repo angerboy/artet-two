@@ -141,10 +141,10 @@ const idToAnimationClass = {
 	}
 
 	var isPanel3Visible = false;
-	var isPanel5Visible = false;
+	var isPanel6Visible = false;
 
 	var panel3 = document.getElementById('panel-3-animation-items');
-	var panel5 = document.getElementById('panel-5-animation-items');
+	var panel6 = document.getElementById('panel-6-animation-items');
 
 	function animatePanelsIfVisible() {
 		if(isInViewport(panel3)) {
@@ -153,10 +153,10 @@ const idToAnimationClass = {
 				animatePanel(3);
 			}
 		}
-		if(isInViewport(panel5)) {
-			if(!isPanel5Visible) {
-				isPanel5Visible = true;
-				animatePanel(5);
+		if(isInViewport(panel6)) {
+			if(!isPanel6Visible) {
+				isPanel6Visible = true;
+				animatePanel(6);
 			}
 		}
 	}
