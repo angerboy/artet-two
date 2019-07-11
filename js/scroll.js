@@ -107,10 +107,11 @@ const idToAnimationClass = {
 		1: 'visible',
 		2: 'hidden',
 		3: 'visible',
-		4: 'visible',
+		4: 'hidden',
 		5: 'hidden',
-		6: 'hidden',
-		7: 'visible'
+		6: 'visible',
+		7: 'visible',
+		8: 'hidden'
 	}
 
 	const panelNumberToPositionIndicatorBGImageMap = {
