@@ -9,6 +9,7 @@ setRowHeights();
 if(isMobile) {
 	window.addEventListener('resize', () => {
 		INNER_HEIGHT = window.innerHeight;
+		console.log('height: ', INNER_HEIGHT);
 		setRowHeights();
 	});
 }

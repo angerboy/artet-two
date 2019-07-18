@@ -525,7 +525,7 @@ img#scroll-to-discover-mobile {
 }
 
 /* mobile phones landscape */
-@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+@media only screen and (max-device-width: 900px) and (orientation: landscape) {
 	.content-container .row.panel-4 {
 		background: url("../assets/Background/artet_003.jpg") 70% 68% / 150% no-repeat;
 	}
@@ -1198,6 +1198,53 @@ img#scroll-to-discover-mobile {
 }
 
 @media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 768px) 
+									 and (orientation: landscape) {
+
+	.landing-text-container {
+		max-height: 100%;
+		width: 75%;
+	}
+
+	.landing-text-container p {
+		font-size: 8vw;
+	}					
+
+	img#scroll-to-discover {
+		display: none;
+	}	
+
+	.landing-block img#scroll-to-discover-mobile {
+		display: block;
+		width: 30%;
+	}
+
+	.text-block-left .text-container {
+		margin-left: 8%;
+	}
+
+	.panel-3 .animation-container-relative {
+		width: 75%;
+	}
+	.text-block-right .text-container {
+		margin-right: 5%;
+	}
+
+	.row.panel-7 .text-container-full .info-text p {
+    font-size: 2vw;
+	}
+
+	.panel-7 .info-text h1 {
+    font-size: 7vw;
+    margin-bottom: 2%;
+	}
+
+	.row.panel-7 .text-container-full .info-text p a {
+    font-size: 2vw;
+	}
+}
+
+@media only screen and (min-device-width: 769px) 
                    and (max-device-width: 900px) 
 									 and (orientation: landscape) {
 
@@ -1221,6 +1268,30 @@ img#scroll-to-discover-mobile {
 
 	.text-block-left .text-container {
 		margin-left: 8%;
+	}
+
+	.panel-3 .animation-container-relative {
+		width: 75%;
+	}
+	.text-block-right .text-container {
+		margin-right: 5%;
+	}
+
+	.row.panel-7 .text-container-full .info-text {
+		max-width: 90%;
+	}
+
+	.row.panel-7 .text-container-full .info-text p {
+    font-size: 1.8vw;
+	}
+
+	.panel-7 .info-text h1 {
+    font-size: 7vw;
+    margin-bottom: 2%;
+	}
+
+	.row.panel-7 .text-container-full .info-text p a {
+    font-size: 2vw;
 	}
 }
 
@@ -1505,15 +1576,8 @@ body {
 
 	.age-verification .content-box .logo img {
 		height: auto;
-	}							
-}
-
-/* MOBILE UNSET */
-
-@media only screen and (min-device-width: 320px) 
-                   and (max-device-width: 900px) 
-									 and (orientation: portrait) {
-
+	}	
+	
 	.position-indicator {
 		display: none;	
 	}
