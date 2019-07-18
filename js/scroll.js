@@ -1,4 +1,7 @@
 var INNER_HEIGHT = window.innerHeight;
+var INNER_WIDTH = window.innerWidth;
+
+console.log(`height: ${INNER_HEIGHT} and width: ${INNER_WIDTH}`);
 
 var positionIndicator = document.getElementById('position-indicator');
 var style = getComputedStyle(positionIndicator);
@@ -6,12 +9,34 @@ const isMobile = style.display === 'none';
 
 setRowHeights();
 
+// Wait until innerheight changes, for max 120 frames
+function orientationChanged() {
+  const timeout = 120;
+  return new window.Promise(function(resolve) {
+    const go = (i, height0) => {
+      window.innerHeight != height0 || i >= timeout ?
+        resolve() :
+        window.requestAnimationFrame(() => go(i + 1, height0));
+    };
+    go(0, window.innerHeight);
+  });
+}
+
 if(isMobile) {
-	window.addEventListener('resize', () => {
-		INNER_HEIGHT = window.innerHeight;
-		console.log('height: ', INNER_HEIGHT);
-		setRowHeights();
-	});
+	window.addEventListener('orientationchange', function () {
+    orientationChanged().then(function() {
+			const height = INNER_HEIGHT;
+			INNER_HEIGHT = INNER_WIDTH;
+			INNER_WIDTH = height;
+			setRowHeights();
+    });
+	});	
+
+	// window.addEventListener('resize', () => {
+	// 	INNER_HEIGHT = window.innerHeight;
+	// 	console.log('height: ', INNER_HEIGHT);
+	// 	setRowHeights();
+	// });
 }
 
 function setRowHeights() {
