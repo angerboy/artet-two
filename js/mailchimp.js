@@ -39,7 +39,9 @@ function register($form) {
 function success() {
     $('.success').removeClass('hidden');
     $('.success').addClass('visible');
+    $('.success').css('display', 'block');
 
     $('form').removeClass('visible');
     $('form').addClass('hidden');
+    $('form').css('display', 'none');
 }

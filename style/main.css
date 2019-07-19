@@ -951,8 +951,14 @@ img#scroll-to-discover-mobile {
 
 .footer .text-and-email {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	width: 50%;
+}
+
+.footer .email-form-container {
+	width: 50%;
+	display: flex;
+	justify-content: center;
 }
 
 .footer .text-and-email p {
@@ -1020,6 +1026,7 @@ img#scroll-to-discover-mobile {
 .footer .success {
 	color: #fdf7e4;
 	font-family: 'PetitSerif';
+	display: none;
 }
 
 
