@@ -951,7 +951,7 @@ img#scroll-to-discover-mobile {
 
 .footer .text-and-email {
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	width: 50%;
 }
 
