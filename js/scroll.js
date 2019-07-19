@@ -1,8 +1,6 @@
 var INNER_HEIGHT = window.innerHeight;
 var INNER_WIDTH = window.innerWidth;
 
-console.log(`height: ${INNER_HEIGHT} and width: ${INNER_WIDTH}`);
-
 var positionIndicator = document.getElementById('position-indicator');
 var style = getComputedStyle(positionIndicator);
 const isMobile = style.display === 'none';
@@ -31,12 +29,6 @@ if(isMobile) {
 			setRowHeights();
     });
 	});	
-
-	// window.addEventListener('resize', () => {
-	// 	INNER_HEIGHT = window.innerHeight;
-	// 	console.log('height: ', INNER_HEIGHT);
-	// 	setRowHeights();
-	// });
 }
 
 function setRowHeights() {

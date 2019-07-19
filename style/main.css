@@ -1207,7 +1207,8 @@ img#scroll-to-discover-mobile {
 	}
 
 	.landing-text-container p {
-		font-size: 8vw;
+		font-size: 7.4vw;
+		line-height: 1.1;
 	}					
 
 	img#scroll-to-discover {
@@ -1231,16 +1232,17 @@ img#scroll-to-discover-mobile {
 	}
 
 	.row.panel-7 .text-container-full .info-text p {
-    font-size: 2vw;
+		line-height: 1.4;
+    font-size: 1.9vw;
 	}
 
 	.panel-7 .info-text h1 {
-    font-size: 7vw;
+    font-size: 6vw;
     margin-bottom: 2%;
 	}
 
 	.row.panel-7 .text-container-full .info-text p a {
-    font-size: 2vw;
+    font-size: 1.9vw;
 	}
 }
 
