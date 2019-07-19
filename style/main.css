@@ -483,7 +483,7 @@ img#scroll-to-discover-mobile {
 }
 
 /* mobile phones portrait */
-@media only screen and (max-device-width: 767px) and (orientation: portrait) {
+@media only screen and (max-width: 767px) and (orientation: portrait) {
 	.dosing-container {
 		flex-direction: column;
 	}
@@ -525,7 +525,7 @@ img#scroll-to-discover-mobile {
 }
 
 /* mobile phones landscape */
-@media only screen and (max-device-width: 900px) and (orientation: landscape) {
+@media only screen and (max-width: 900px) and (orientation: landscape) {
 	.content-container .row.panel-4 {
 		background: url("../assets/Background/artet_003.jpg") 70% 68% / 150% no-repeat;
 	}
@@ -559,7 +559,7 @@ img#scroll-to-discover-mobile {
 }
 
 /* iPads Our portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) { 
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) { 
 	.content-container .row.panel-4 {
 		background: url("../assets/Background/artet_003.jpg") 81% 68% / cover no-repeat;
 	}
@@ -1033,7 +1033,7 @@ img#scroll-to-discover-mobile {
 /* MEDIA QUERIES */
 
 /* iPads Our Commitment Page */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
 	.row.panel-7 .text-container-full .info-text {
 		max-width: 75%;
@@ -1070,7 +1070,7 @@ img#scroll-to-discover-mobile {
 }
 
 /* mobile phones landscape */
-@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+@media only screen and (max-width: 767px) and (orientation: landscape) {
 
 	.panel-8 .learn-more-text-box {
 		width: 100%;
@@ -1099,7 +1099,7 @@ img#scroll-to-discover-mobile {
 }
 
 /* mobile phones portrait */
-@media only screen and (max-device-width: 767px) and (orientation: portrait) {
+@media only screen and (max-width: 767px) and (orientation: portrait) {
 	.panel-8 .animation-container {
 		height: 40%;
 		padding: 10% 17% 0 17%;
@@ -1122,7 +1122,7 @@ img#scroll-to-discover-mobile {
 
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: portrait) {
+@media only screen and (min-width: 320px) and (max-width: 900px) and (orientation: portrait) {
 
 	.content-container .row.text-block-right.panel-3 {
 		background-image: none;
@@ -1555,8 +1555,8 @@ body {
 	color: #1d2942;
 }
 
-@media only screen and (min-device-width: 320px) 
-                   and (max-device-width: 900px) 
+@media only screen and (min-width: 320px) 
+                   and (max-width: 900px) 
 									 and (orientation: portrait) {
 
 	.age-verification .content-box {
@@ -1630,16 +1630,16 @@ body {
 	}
 }
 
-@media only screen and (min-device-width: 320px) 
-                   and (max-device-width: 1366px) 
+@media only screen and (min-width: 320px) 
+                   and (max-width: 1366px) 
 									 and (orientation: landscape) {
 	.position-indicator {
 		display: none;	
 	}
 }
 
-@media only screen and (min-device-width: 320px) 
-                   and (max-device-width: 1024px) 
+@media only screen and (min-width: 320px) 
+                   and (max-width: 1024px) 
 									 and (orientation: portrait) {
 	.position-indicator {
 		display: none;	
