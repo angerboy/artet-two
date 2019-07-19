@@ -1253,8 +1253,8 @@ img#scroll-to-discover-mobile {
 	}
 }
 
-@media only screen and (min-device-width: 769px) 
-                   and (max-device-width: 900px) 
+@media only screen and (min-width: 769px) 
+                   and (max-width: 900px) 
 									 and (orientation: landscape) {
 
 	.landing-text-container {
