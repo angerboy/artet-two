@@ -1,11 +1,9 @@
 $(document).ready( function () {
-    // I only have one form on the page but you can be more specific if need be.
     var $form = $('form');
 
     if ( $form.length > 0 ) {
         $('#mc-embedded-subscribe').bind('click', function ( event ) {
             if ( event ) event.preventDefault();
-            // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
             register($form);
         });
     }
