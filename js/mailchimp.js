@@ -3,7 +3,7 @@ $(document).ready( function () {
     var $form = $('form');
 
     if ( $form.length > 0 ) {
-        $('form input[type="submit"]').bind('click', function ( event ) {
+        $('#mc-embedded-subscribe').bind('click', function ( event ) {
             if ( event ) event.preventDefault();
             // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
             register($form);
