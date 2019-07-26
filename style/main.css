@@ -956,7 +956,7 @@ img#scroll-to-discover-mobile {
 }
 
 .footer .email-form-container {
-	width: 50%;
+	/* width: 50%; */
 	display: flex;
 	justify-content: center;
 }
@@ -1555,8 +1555,8 @@ body {
 	color: #1d2942;
 }
 
-@media only screen and (min-width: 320px) 
-                   and (max-width: 900px) 
+@media only screen and (min-device-width: 320px) 
+                   and (max-device-width: 900px) 
 									 and (orientation: portrait) {
 
 	.age-verification .content-box {
@@ -1630,16 +1630,16 @@ body {
 	}
 }
 
-@media only screen and (min-width: 320px) 
-                   and (max-width: 1366px) 
+@media only screen and (min-device-width: 320px) 
+                   and (max-device-width: 1366px) 
 									 and (orientation: landscape) {
 	.position-indicator {
 		display: none;	
 	}
 }
 
-@media only screen and (min-width: 320px) 
-                   and (max-width: 1024px) 
+@media only screen and (min-device-width: 320px) 
+                   and (max-device-width: 1024px) 
 									 and (orientation: portrait) {
 	.position-indicator {
 		display: none;	
