@@ -60,6 +60,8 @@ function _scrollY(obj) {
 		pan = this || obj;
 		plength = parseInt(pan.offsetHeight);
 	}
+
+	console.log('pan: ', pan);
 	
 	if (pan === undefined) {
 		return;
@@ -241,5 +243,23 @@ function scrollToPanel(pan) {
 		pan.addEventListener('wheel', _scrollY);
 		hold = false;
 	}, 1500);
+}
 
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+		e = e || window.event;
+		var container = document.getElementById('content-container');
+
+    if (e.keyCode == '38') {
+			// up arrow
+			scdir = 'down';
+			scrollToPanel(container);
+    }
+    else if (e.keyCode == '40') {
+			// down arrow
+			scdir = 'up';
+			scrollToPanel(container);
+		}
 }
