@@ -9,7 +9,6 @@ const isMobile = style.display === 'none';
 
 setRowHeights();
 
-// Wait until innerheight changes, for max 120 frames
 function orientationChanged() {
   const timeout = 120;
   return new window.Promise(function(resolve) {
@@ -60,8 +59,6 @@ function _scrollY(obj) {
 		pan = this || obj;
 		plength = parseInt(pan.offsetHeight);
 	}
-
-	console.log('pan: ', pan);
 	
 	if (pan === undefined) {
 		return;
@@ -219,7 +216,15 @@ window.onload = () => {
 	}, 100);
 }
 
-function scrollToPanel(pan) {
+function scrollToPanel(obj) {
+	if ((this !== undefined && this.id === 'content-container') || (obj !== undefined && obj.id === 'content-container')) {
+		pan = this || obj;
+		plength = parseInt(pan.offsetHeight);
+	}
+	
+	if (pan === undefined) {
+		return;
+	}
 
 	plength = plength || parseInt(pan.offsetHeight / vmin);
 	slength = parseInt(pan.style.transform.replace('translateY(', ''));
