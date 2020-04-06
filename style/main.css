@@ -1644,3 +1644,41 @@ body {
 		display: none;	
 	}
 }
+/* JANE */
+#ShopNow {
+  position: fixed;
+  top: 5%;
+  right: 0;
+  z-index: 99999;
+  padding-right:25px;
+}
+#ShopNow a {
+  background: #62B3A6;
+  color: white;
+  display: inline-block;
+  padding:15px;
+  border-radius: 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: PetitSerif;
+  Text-decoration: none;
+}
+.Jane {
+Background: #202744;
+text-align: center;
+Margin:0;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-right: 8%;
+Font-family: Abuget;
+Color: #FCF6E3;
+Font-size: 75px;
+width:100%;
+Padding-top: 10px;
+Padding-bottom; 10px;
+}
+.Jane a {
+text-decoration: none;
+}
+
