@@ -47,9 +47,11 @@ function fadeInLandingBlock() {
     const text = document.getElementById('landing-block-text');
     const scroll = document.getElementById('scroll-to-discover');
     const scrollMobile = document.getElementById('scroll-to-discover-mobile');
+    const buyNow = document.getElementById('buy-now-button');
 
     logo.className = "visible";
     text.className = "landing-text-container visible";
     scroll.className = "visible";
     scrollMobile.className = "visible";
+    buyNow.className = "visible";
 }
