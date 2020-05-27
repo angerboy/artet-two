@@ -9,9 +9,11 @@ if( document.readyState !== 'loading' ) {
 function checkAge() {
     const ageVerificationDiv = document.getElementById('age-verification');
     const sidebar = document.getElementById('position-indicator');
+    const buyNow = document.getElementById('buy-now-button');
     if(document.cookie === "verified=true") {
         ageVerificationDiv.className = "age-verification hidden";
         sidebar.className = "position-indicator visible";
+        buyNow.className = "visible";
 
         fadeInLandingBlock();
     } else {
