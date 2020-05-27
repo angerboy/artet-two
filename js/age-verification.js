@@ -22,9 +22,11 @@ function checkAge() {
 function over21() {
     const ageVerificationDiv = document.getElementById('age-verification');
     const sidebar = document.getElementById('position-indicator');
+    const buyNow = document.getElementById('buy-now-button');
 
     ageVerificationDiv.className = "age-verification hidden";
     sidebar.className = "position-indicator visible";
+    buyNow.className = "visible";
 
     document.cookie = "verified=true";
 
